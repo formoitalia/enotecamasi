@@ -1,0 +1,62 @@
+.media-block {
+    display: block;
+    min-height: auto;
+
+    &__image {
+        height: auto;
+
+        & > img {
+            display: none !important;
+        }
+    }
+
+    &__left {
+        display: none;
+    }
+
+    &__right {
+        max-width: 400px;
+        margin: auto;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+        picture {
+            img {
+                display: block;
+                position: relative !important;
+                height: auto !important;
+                object-fit: contain;
+                top: auto !important;
+                left: auto !important;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.text_block {
+    max-width: 40rem;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.text-content {
+    padding: 2rem 1rem !important;
+
+    &__title {
+        margin-bottom: 0;
+    }
+
+    &__text p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.cta-block {
+    &__content {
+        padding: 0 1rem;
+    }
+}

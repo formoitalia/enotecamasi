@@ -1,0 +1,193 @@
+
+/* -----------------------------------------------------------------------------
+ * NAVBAR
+ ----------------------------------------------------------------------------- */
+ header {
+    height: auto;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+
+    @media screen and (min-width: 1024px) {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .nav {
+        &__menu {
+            justify-content: start !important;
+        }
+
+        &__logo {
+            img {
+                height: 80px;
+                width: auto;
+                object-fit: contain;
+            }
+        }
+
+        &__account {
+            .change_market {
+                margin-right: 10px;
+
+                &--title {
+                    display: none;
+                }
+
+                .nav__menu__link[role=change-market] {
+                    display: inline;
+                    padding: 3px 2px 3px 10px;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    letter-spacing: .05em;
+                    line-height: 1em;
+
+                    &::before {
+                        content: '';
+                        height: 1.2em;
+                        width: 1.2em;
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M3 12a9 9 0 1 0 18 0a9 9 0 0 0-18 0m.6-3h16.8M3.6 15h16.8'/%3E%3Cpath d='M11.5 3a17 17 0 0 0 0 18m1-18a17 17 0 0 1 0 18'/%3E%3C/g%3E%3C/svg%3E");
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: center center;
+                        display: inline-block;
+                        margin-right: .75em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.category-menu {
+    background: var(--color-gray-300);
+    color: var(--color-black);
+    height: auto;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+
+    &__list {
+        display: flex;
+        width: 100%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        max-width: var(--breakpoint-wall);
+        margin: auto;
+
+        @media screen and (min-width: 1024px) {
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        flex: 1 1 0%;
+        max-width: 250px;
+        min-width: 150px;
+
+        a {
+            color: inherit;
+            display: block;
+            height: 120px;
+            font-size: 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+
+            &[title="COSTA ARENTE"] {
+                @extend .costarente;
+            }
+
+            &[title="MAISON BURTIN"] {
+                @extend .maisonburtin;
+            }
+
+            &[title="TORRE ROSAZZA"] {
+                @extend .torrerosazza;
+            }
+
+            &[title="BRICCO DEI GUAZZI"] {
+                @extend .briccodeiguazzi;
+            }
+
+            &[title="V8+ "] {
+                @extend .v8;
+            }
+        }
+    }
+}
+
+/* -----------------------------------------------------------------------------
+ * FOOTER
+ ----------------------------------------------------------------------------- */
+ .footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        @media screen and (min-width: 1024px) {
+            flex-direction: row;
+            gap: 3rem;
+        }
+
+        .footer__logo {
+            flex: none;
+            display: inline-flex;
+            justify-content: center;
+
+            img {
+                height: auto;
+                width: 100%;
+                max-width: 12rem;
+            }
+
+            @media screen and (min-width: 1024px) {
+                width: 20%;
+                justify-content: start;
+            }
+        }
+
+        .footer__blocks {
+            flex: 1 1 0%;
+            gap: 3rem;
+            margin-top: 0;
+            margin-bottom: 0;
+
+            &__item {
+                font-size: .75rem;
+
+                &__title {
+                    font-weight: 600;
+                    margin-bottom: 20px;
+                    text-transform: uppercase;
+                    letter-spacing: .05em;
+                    color: var(--color-black);
+                    min-height: 1.2em;
+                }
+
+                &__content {
+                    & > * {
+                        margin-top: 10px;
+
+                        &:first-child {
+                            margin-top: 0px;
+                        }
+                    }
+                }
+
+                &__link {
+                    margin-top: 10px;
+
+                    &:first-child {
+                        margin-top: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
