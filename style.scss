@@ -1,12 +1,26 @@
+@import url("https://use.typekit.net/dly8jpu.css");
+
 /* -----------------------------------------------------------------------------
  * VARS
  ----------------------------------------------------------------------------- */
 :root {
 }
 
-// @import "categorie";
-// @import "parts";
-// @import "commerce";
-// @import "pages";
-// @import "prodotto";
-// @import "components";
+@import "parts";
+@import "commerce";
+@import "pages";
+@import "prodotto";
+@import "components";
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "expressway", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "expressway", sans-serif;
+}

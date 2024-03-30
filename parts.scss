@@ -62,66 +62,13 @@
 }
 
 .category-menu {
-    background: var(--color-gray-300);
-    color: var(--color-black);
-    height: auto;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-
-    &__list {
-        display: flex;
-        width: 100%;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-        max-width: var(--breakpoint-wall);
-        margin: auto;
-
-        @media screen and (min-width: 1024px) {
-            justify-content: center;
-        }
-    }
-
-    &__item {
-        flex: 1 1 0%;
-        max-width: 250px;
-        min-width: 150px;
-
-        a {
-            color: inherit;
-            display: block;
-            height: 120px;
-            font-size: 0;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center center;
-
-            &[title="COSTA ARENTE"] {
-                @extend .costarente;
-            }
-
-            &[title="MAISON BURTIN"] {
-                @extend .maisonburtin;
-            }
-
-            &[title="TORRE ROSAZZA"] {
-                @extend .torrerosazza;
-            }
-
-            &[title="BRICCO DEI GUAZZI"] {
-                @extend .briccodeiguazzi;
-            }
-
-            &[title="V8+ "] {
-                @extend .v8;
-            }
-        }
-    }
+    display: none;
 }
 
 /* -----------------------------------------------------------------------------
  * FOOTER
  ----------------------------------------------------------------------------- */
- .footer {
+.footer {
     padding-top: 3rem;
     padding-bottom: 3rem;
 
