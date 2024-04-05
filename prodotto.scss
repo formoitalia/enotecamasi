@@ -1,9 +1,134 @@
 /* -----------------------------------------------------------------------------
+ * CATEGORIA PRODOTTI
+ ----------------------------------------------------------------------------- */
+.wrap .category-intro {
+    margin: 4rem auto;
+
+    &__title {
+        color: var(--color-black);
+        font-size: 3.5rem;
+        font-weight: 700;
+        position: relative;
+        padding-bottom: 3rem;
+        margin-bottom: 2rem;
+
+        &::after {
+            content: '';
+            height: 1px;
+            width: 100%;
+            left: 50%;
+            bottom: 0;
+            width: 24rem;
+            position: absolute;
+            margin-left: -12rem;
+            background-color: var(--color-black);
+        }
+    }
+
+    &__description {
+        .text_block {
+            font-size: 1.75rem;
+            max-width: none;
+            text-wrap: balance;
+        }
+    }
+}
+
+/* -----------------------------------------------------------------------------
+ * GRIGLIA E CARD PRODOTTO
+ ----------------------------------------------------------------------------- */
+.gtm-product-list .product-list {
+    padding: 2rem 0 6rem;
+    display: grid;
+    row-gap: 3rem;
+    column-gap: 2rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    &__item {
+        padding: 0;
+
+        .product-box {
+            display: flex;
+            flex-direction: column;
+
+            &__header {
+                flex: 1 1 0%;
+                padding: 0;
+            }
+
+            &__image img {
+                padding: 0;
+                max-width: 100%;
+                object-fit: cover;
+                aspect-ratio: 2/3;
+            }
+
+            &__title {
+                font-size: 1rem;
+                margin-top: 0.75rem;
+                max-height: none;
+                text-align: left;
+                padding-top: 1rem;
+                justify-content: start;
+            }
+
+            &__body {
+                margin-top: 0.75rem;
+                justify-content: start;
+
+            }
+
+            &__price span {
+                padding: 0 !important;
+                font-size: 1rem;
+                font-weight: 700;
+            }
+
+            &__action {
+                margin: 1rem 0 0;
+                display: flex;
+
+                .button--primary {
+                    color: var(--color-black);
+                    border: none;
+                    height: auto;
+                    padding: 0.5rem 0;
+                    min-width: auto;
+                    text-align: left;
+                    font-weight: 700;
+                    background: transparent;
+                    text-transform: uppercase;
+                    transition: opacity .3s ease;
+
+                    &:hover {
+                        opacity: .5;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                    &::before {
+                        content: '>';
+                        font-size: 1rem;
+                        margin-right: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* -----------------------------------------------------------------------------
  * SINGOLO PRODOTTO
  ----------------------------------------------------------------------------- */
 .product-hero {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    &__title {
+        font-size: 2rem;
+    }
 
     &__image {
         &__thumbs {
@@ -23,14 +148,13 @@
 
         &__wrap {
             order: 1000;
-            border-top: 1px solid var(--color-primary);
-            padding-top: 1rem;
+            padding-top: 3rem;
             display: flex;
             flex-direction: column;
             gap: 10px;
 
             @media screen and (min-width: 1024px) {
-                flex-direction: row;
+                flex-direction: row-reverse;
             }
         }
     }
@@ -57,7 +181,7 @@
         flex-direction: column;
 
         @media screen and (min-width: 1024px) {
-            align-items: end;
+            align-items: start;
         }
     }
 
@@ -88,6 +212,35 @@
 
     &__action {
         order: 1000;
+        margin: 1rem 0 0;
+        display: flex;
+
+        .button--primary {
+            color: var(--color-black);
+            border: none;
+            height: auto;
+            padding: 0.5rem 0 !important;
+            min-width: auto;
+            text-align: left;
+            font-weight: 700;
+            background: transparent;
+            text-transform: uppercase;
+            transition: opacity .3s ease;
+
+            &:hover {
+                opacity: .5;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &::before {
+                content: '>';
+                font-size: 1rem;
+                margin-right: 0.5rem;
+            }
+        }
     }
 
     &__quantity {
@@ -125,13 +278,11 @@
 
         &-button {
             order: 9999999;
-            margin-top: 1rem;
             border: 0;
             background-color: transparent;
             text-align: left;
-            padding: .75rem;
-            font-weight: 600;
             transition: opacity .3s ease;
+            text-transform: uppercase;
             cursor: pointer;
 
             &:hover {
@@ -140,6 +291,12 @@
 
             &:focus {
                 outline: none;
+            }
+
+            &::before {
+                content: '>';
+                font-size: 1rem;
+                margin-right: 0.5rem;
             }
         }
 
@@ -214,78 +371,5 @@
         font-size: 1.5rem;
         letter-spacing: .05rem;
         text-transform: uppercase;
-    }
-
-    .product-list {
-        padding: 2rem 0 6rem;
-        display: grid;
-        row-gap: 3rem;
-        column-gap: 2rem;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-
-        &__item {
-            padding: 0;
-
-            .product-box {
-                display: flex;
-                flex-direction: column;
-
-                &__header {
-                    flex: 1 1 0%;
-                    padding: 0;
-                }
-
-                &__image img {
-                    padding: 0;
-                    max-width: 100%;
-                    object-fit: cover;
-                    aspect-ratio: 2/3;
-                }
-
-                &__title {
-                    font-size: 1rem;
-                    margin-top: 0.75rem;
-                    max-height: none;
-                    text-align: left;
-                    padding-top: 1rem;
-                    justify-content: start;
-                }
-
-                &__body {
-                    margin-top: 0.75rem;
-                    justify-content: start;
-
-                }
-
-                &__price span {
-                    padding: 0 !important;
-                    font-size: 1rem;
-                    font-weight: 700;
-                }
-
-                &__action {
-                    margin: 1rem 0 0;
-                    display: flex;
-
-                    .button--primary {
-                        color: var(--color-black);
-                        border: none;
-                        height: auto;
-                        padding: 0.5rem 0;
-                        min-width: auto;
-                        text-align: left;
-                        font-weight: 700;
-                        background: transparent;
-                        text-transform: uppercase;
-
-                        &::before {
-                            content: '>';
-                            font-size: 1rem;
-                            margin-right: 0.5rem;
-                        }
-                    }
-                }
-            }
-        }
     }
 }
