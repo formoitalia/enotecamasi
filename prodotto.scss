@@ -66,7 +66,8 @@
             }
 
             &__title {
-                font-size: .85rem;
+                font-size: .9rem;
+                letter-spacing: -.01em;
                 margin-top: 0.85rem;
                 max-height: none;
                 min-height: 0;
@@ -74,12 +75,6 @@
                 padding-top: 1rem;
                 justify-content: start;
             }
-
-            // &__title,
-            // &__body {
-            //     padding-left: 1rem !important;
-            //     padding-right: 1rem !important;
-            // }
 
             &__body {
                 margin-top: 0.5rem;
@@ -96,7 +91,7 @@
             &__price span,
             &__action .button--primary {
                 font-size: .75rem;
-                opacity: .7;
+                opacity: .8;
             }
 
             &__action {
@@ -141,6 +136,7 @@
 .product-hero {
     &__title {
         font-size: 1.5rem;
+        letter-spacing: -.01em;
     }
 
     &__image {
