@@ -2,7 +2,6 @@ import './style.scss'
 
 const hasTrustPilot = true
 const mainWrapper = document.querySelector('main.wrap')
-let productHeroContent = document.querySelector('.product-hero__content')
 
 // -------------------------------------------------------------------------
 // TRUSTPILOT
@@ -24,51 +23,55 @@ if (hasTrustPilot) {
     document.head.appendChild(script)
 }
 
-// -------------------------------------------------------------------------
-// PRODUCT
-// -------------------------------------------------------------------------
-if (productHeroContent) {
-    let infoOverlay = document.createElement('div')
-    infoOverlay.classList.add('product-hero__info-overflay')
-
-    infoOverlay.innerHTML = productHeroContent.innerHTML
-
-    let infoOverlayElement = document.body.appendChild(infoOverlay)
+window.addEventListener('pageshow', () => {
+    let productHeroContent = document.querySelector('.product-hero__content')
 
     // -------------------------------------------------------------------------
-    let infoOverlayBtn = document.createElement('button')
-    infoOverlayBtn.classList.add('product-hero__info-overflay-button')
+    // PRODUCT
+    // -------------------------------------------------------------------------
+    if (productHeroContent) {
+        let infoOverlay = document.createElement('div')
+        infoOverlay.classList.add('product-hero__info-overflay')
 
-    infoOverlayBtn.innerHTML = 'Additional info on this wine'
+        infoOverlay.innerHTML = productHeroContent.innerHTML
 
-    infoOverlayBtn.addEventListener('click', () => {
-        let showing = infoOverlayElement.classList.contains('show')
+        let infoOverlayElement = document.body.appendChild(infoOverlay)
 
-        // @todo -> click outside
+        // -------------------------------------------------------------------------
+        let infoOverlayBtn = document.createElement('button')
+        infoOverlayBtn.classList.add('product-hero__info-overflay-button')
 
-        showing ? infoOverlayElement.classList.remove('show') : infoOverlayElement.classList.add('show')
-    })
+        infoOverlayBtn.innerHTML = 'Additional info on this wine'
 
-    productHeroContent.appendChild(infoOverlayBtn)
-}
+        infoOverlayBtn.addEventListener('click', () => {
+            let showing = infoOverlayElement.classList.contains('show')
 
-let productDetailItems = document.querySelectorAll('.product-detail__item')
-if (productDetailItems.length) {
-    productDetailItems.forEach(item => {
-        let title = item.querySelector('.product-detail__title')
+            // @todo -> click outside
 
-        if (title.innerText.toLowerCase() == 'immagine') {
-            let image = item.querySelector('img')
+            showing ? infoOverlayElement.classList.remove('show') : infoOverlayElement.classList.add('show')
+        })
 
-            if (image) {
-                let media = document.createElement('img')
-                media.src = image.src
-                media.classList.add('product-hero__image__additional')
+        productHeroContent.appendChild(infoOverlayBtn)
+    }
 
-                let title = document.querySelector('h1.product-hero__title')
+    let productDetailItems = document.querySelectorAll('.product-detail__item')
+    if (productDetailItems.length) {
+        productDetailItems.forEach(item => {
+            let title = item.querySelector('.product-detail__title')
 
-                title.parentNode.insertBefore(media, title)
+            if (title.innerText.toLowerCase() == 'immagine') {
+                let image = item.querySelector('img')
+
+                if (image) {
+                    let media = document.createElement('img')
+                    media.src = image.src
+                    media.classList.add('product-hero__image__additional')
+
+                    let title = document.querySelector('h1.product-hero__title')
+
+                    title.parentNode.insertBefore(media, title)
+                }
             }
-        }
-    })
-}
+        })
+    }
+})
