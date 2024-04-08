@@ -23,7 +23,7 @@ if (hasTrustPilot) {
     document.head.appendChild(script)
 }
 
-window.addEventListener('pageshow', () => {
+window.addEventListener('visibilitychange', () => {
     let productHeroContent = document.querySelector('.product-hero__content')
 
     // -------------------------------------------------------------------------
