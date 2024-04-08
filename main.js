@@ -4,6 +4,29 @@ const hasTrustPilot = true
 const mainWrapper = document.querySelector('main.wrap')
 let productHeroContent = document.querySelector('.product-hero__content')
 
+// -------------------------------------------------------------------------
+// TRUSTPILOT
+// -------------------------------------------------------------------------
+if (hasTrustPilot) {
+    const trustpilotbox = document.createElement('div')
+    trustpilotbox.innerHTML = `
+        <div class="trustpilot-widget" data-locale="it-IT" data-template-id="5419b637fa0340045cd0c936" data-businessunit-id="64be4445f0e432908cdebdcd" data-style-height="20px" data-style-width="100%" data-theme="light">
+            <a href="https://it.trustpilot.com/review/enotecamasi.it" target="_blank" rel="noopener">Trustpilot</a>
+        </div>
+    `
+
+    mainWrapper.parentNode.insertBefore(trustpilotbox, mainWrapper.nextSibling)
+
+    const script = document.createElement('script')
+    script.src = '//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js'
+    script.type = 'text/javascript'
+
+    document.head.appendChild(script)
+}
+
+// -------------------------------------------------------------------------
+// PRODUCT
+// -------------------------------------------------------------------------
 if (productHeroContent) {
     let infoOverlay = document.createElement('div')
     infoOverlay.classList.add('product-hero__info-overflay')
@@ -29,19 +52,23 @@ if (productHeroContent) {
     productHeroContent.appendChild(infoOverlayBtn)
 }
 
-if (hasTrustPilot) {
-    const trustpilotbox = document.createElement('div')
-    trustpilotbox.innerHTML = `
-        <div class="trustpilot-widget" data-locale="it-IT" data-template-id="5419b637fa0340045cd0c936" data-businessunit-id="64be4445f0e432908cdebdcd" data-style-height="20px" data-style-width="100%" data-theme="light">
-            <a href="https://it.trustpilot.com/review/enotecamasi.it" target="_blank" rel="noopener">Trustpilot</a>
-        </div>
-    `
+let productDetailItems = document.querySelectorAll('.product-detail__item')
+if (productDetailItems.length) {
+    productDetailItems.forEach(item => {
+        let title = item.querySelector('.product-detail__title')
 
-    mainWrapper.parentNode.insertBefore(trustpilotbox, mainWrapper.nextSibling)
+        if (title.innerText.toLowerCase() == 'immagine') {
+            let image = item.querySelector('img')
 
-    const script = document.createElement('script')
-    script.src = '//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js'
-    script.type = 'text/javascript'
+            if (image) {
+                let media = document.createElement('img')
+                media.src = image.src
+                media.classList.add('product-hero__image__additional')
 
-    document.head.appendChild(script)
+                let title = document.querySelector('h1.product-hero__title')
+
+                title.parentNode.insertBefore(media, title)
+            }
+        }
+    })
 }
