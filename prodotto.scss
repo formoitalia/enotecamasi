@@ -123,23 +123,29 @@
  * SINGOLO PRODOTTO
  ----------------------------------------------------------------------------- */
 .product-hero {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
     &__title {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     &__image {
+        @media screen and (min-width: 1024px) {
+            flex: 0 0 70%;
+        }
+
         &__thumbs {
             display: none;
         }
     }
 
     &__content {
+        @media screen and (min-width: 1024px) {
+            flex: 0 0 30%;
+        }
+
         order: -1;
         display: flex;
         flex-direction: column;
+        justify-content: end;
 
         .product-hero__description,
         .product-hero__info-list {
@@ -160,14 +166,15 @@
     }
 
     &__price {
-        font-size: 1.5rem;
+        font-size: 1rem;
 
         span {
             padding: 0 !important;
         }
 
         @media screen and (min-width: 1024px) {
-            font-size: 2rem;
+            padding-top: .5rem;
+            font-size: 1.25rem;
         }
     }
 
