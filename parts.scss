@@ -73,7 +73,7 @@ body .footer {
     font-family: "expressway", sans-serif;
     padding-top: 3rem;
     padding-bottom: 3rem;
-    background-color: var(--color-black);
+    background-color: #2A2618;
 
     a {
         color: var(--color-white);
@@ -119,6 +119,17 @@ body .footer {
 
             &__item {
                 font-size: .75rem;
+                text-align: center;
+
+                @media screen and (min-width: 1024px) {
+                    &:first-child {
+                        text-align: left;
+                    }
+
+                    &:last-child {
+                        text-align: right;
+                    }
+                }
 
                 &__title {
                     color: var(--color-white);
