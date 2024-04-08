@@ -1,6 +1,7 @@
 import './style.scss'
 
 const hasTrustPilot = true
+const mainWrapper = document.querySelector('main.wrap')
 let productHeroContent = document.querySelector('.product-hero__content')
 
 if (productHeroContent) {
@@ -36,7 +37,7 @@ if (hasTrustPilot) {
         </div>
     `
 
-    document.querySelector('main.wrap').appendChild(trustpilotbox)
+    mainWrapper.parentNode.insertBefore(trustpilotbox, mainWrapper.nextSibling)
 
     const script = document.createElement('script')
     script.src = '//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js'
