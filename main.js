@@ -23,7 +23,7 @@ if (hasTrustPilot) {
     document.head.appendChild(script)
 }
 
-window.addEventListener('visibilitychange', () => {
+setTimeout(() => {
     let productHeroContent = document.querySelector('.product-hero__content')
 
     // -------------------------------------------------------------------------
@@ -74,4 +74,4 @@ window.addEventListener('visibilitychange', () => {
             }
         })
     }
-})
+}, 1000)
