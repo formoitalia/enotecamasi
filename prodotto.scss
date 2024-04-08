@@ -67,27 +67,29 @@
 
             &__title {
                 font-size: 1rem;
-                margin-top: 0.75rem;
+                margin-top: 0.85rem;
                 max-height: none;
+                min-height: none;
                 text-align: left;
                 padding-top: 1rem;
                 justify-content: start;
             }
 
             &__body {
-                margin-top: 0.75rem;
-                justify-content: start;
-
+                margin-top: 0.5rem;
+                display: flex;
+                justify-content: space-between;
             }
 
             &__price span {
                 padding: 0 !important;
                 font-size: 1rem;
                 font-weight: 700;
+                opacity: .5;
             }
 
             &__action {
-                margin: 1rem 0 0;
+                margin: .5rem 0 0;
                 display: flex;
 
                 .button--primary {
