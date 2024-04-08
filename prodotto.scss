@@ -57,13 +57,6 @@
             }
 
             &__image {
-                &__gallery {
-                    img {
-                        width: 100%;
-                        height: auto;
-                    }
-                }
-
                 img {
                     padding: 0;
                     max-width: 100%;
@@ -139,6 +132,13 @@
     &__image {
         @media screen and (min-width: 1024px) {
             flex: 0 0 70%;
+        }
+
+        &__gallery {
+            img {
+                width: 100%;
+                height: auto;
+            }
         }
 
         &__thumbs {
