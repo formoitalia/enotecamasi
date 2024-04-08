@@ -66,10 +66,10 @@
             }
 
             &__title {
-                font-size: 1rem;
+                font-size: .75rem;
                 margin-top: 0.85rem;
                 max-height: none;
-                min-height: none;
+                min-height: 0;
                 text-align: left;
                 padding-top: 1rem;
                 justify-content: start;
@@ -83,7 +83,7 @@
 
             &__body {
                 margin-top: 0.5rem;
-                font-size: .7rem;
+                font-size: .6rem;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
