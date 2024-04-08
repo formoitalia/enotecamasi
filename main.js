@@ -23,12 +23,20 @@ if (hasTrustPilot) {
     document.head.appendChild(script)
 }
 
+// -------------------------------------------------------------------------
+// CATEGORY PAGE
+// -------------------------------------------------------------------------
+if (document.body.classList.contains('category-page')) {
+    let title = mainWrapper.querySelector('.category-intro__title')
+    title.title = title.innerText
+}
+
+// -------------------------------------------------------------------------
+// PRODUCT
+// -------------------------------------------------------------------------
 setTimeout(() => {
     let productHeroContent = document.querySelector('.product-hero__content')
 
-    // -------------------------------------------------------------------------
-    // PRODUCT
-    // -------------------------------------------------------------------------
     if (productHeroContent) {
         let infoOverlay = document.createElement('div')
         infoOverlay.classList.add('product-hero__info-overflay')
@@ -74,4 +82,4 @@ setTimeout(() => {
             }
         })
     }
-}, 1000)
+}, 500)
