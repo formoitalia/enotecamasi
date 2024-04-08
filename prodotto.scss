@@ -66,7 +66,7 @@
             }
 
             &__title {
-                font-size: .75rem;
+                font-size: .85rem;
                 margin-top: 0.85rem;
                 max-height: none;
                 min-height: 0;
@@ -83,7 +83,6 @@
 
             &__body {
                 margin-top: 0.5rem;
-                font-size: .6rem;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -91,8 +90,13 @@
 
             &__price span {
                 padding: 0 !important;
-                font-size: 1rem;
                 font-weight: 700;
+            }
+
+            &__price span,
+            &__action .button--primary {
+                font-size: .75rem;
+                opacity: .7;
             }
 
             &__action {
