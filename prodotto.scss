@@ -237,7 +237,8 @@
         font-weight: 700;
 
         button {
-            border-radius: 3rem !important;
+            border-radius: 0 !important;
+            background: none !important;
 
             @media screen and (max-width: 1023px) {
                 width: 46px;
@@ -399,12 +400,13 @@
     margin-top: 1rem;
 
     &__title {
+        @extend .title;
+
         margin: 0;
         padding: 2rem 1.5rem;
         background-color: var(--color-gray-500);
         color: var(--color-black);
-        font-size: 1.5rem;
-        letter-spacing: .05rem;
-        text-transform: uppercase;
+        font-size: 2rem;
+        text-transform: capitalize;
     }
 }

@@ -3,7 +3,13 @@
 /* -----------------------------------------------------------------------------
  * VARS
  ----------------------------------------------------------------------------- */
-:root {
+.font-serif {
+    font-family: "baskerville-urw", sans-serif;
+}
+
+.title {
+    @extend .font-serif;
+    font-weight: 100;
 }
 
 @import "parts";
