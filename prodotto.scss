@@ -75,6 +75,12 @@
                 justify-content: start;
             }
 
+            &__title
+            &__body {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
             &__body {
                 margin-top: 0.5rem;
                 font-size: .7rem;
