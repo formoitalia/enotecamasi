@@ -1,5 +1,6 @@
 import './style.scss'
 
+const hasTrustPilot = true
 let productHeroContent = document.querySelector('.product-hero__content')
 
 if (productHeroContent) {
@@ -25,4 +26,21 @@ if (productHeroContent) {
     })
 
     productHeroContent.appendChild(infoOverlayBtn)
+}
+
+if (hasTrustPilot) {
+    const trustpilotbox = document.createElement('div')
+    trustpilotbox.innerHTML = `
+        <div class="trustpilot-widget" data-locale="it-IT" data-template-id="5419b637fa0340045cd0c936" data-businessunit-id="64be4445f0e432908cdebdcd" data-style-height="20px" data-style-width="100%" data-theme="light">
+            <a href="https://it.trustpilot.com/review/enotecamasi.it" target="_blank" rel="noopener">Trustpilot</a>
+        </div>
+    `
+
+    document.querySelector('main.wrap').appendChild(trustpilotbox)
+
+    const script = document.createElement('script')
+    script.src = '//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js'
+    script.type = 'text/javascript'
+
+    document.head.appendChild(script)
 }
