@@ -1,6 +1,26 @@
 .media-block {
-    display: block;
-    min-height: auto;
+    &__left {
+        text-align: center;
+        max-width: 32rem;
+        margin: auto;
+        padding: 8rem 1.5rem;
+
+        .media-block {
+            &__title {
+                font-size: 1em;
+                opacity: .5;
+                margin-bottom: 1rem;
+            }
+
+            &__text {
+                h2 {
+                    @extend .title;
+                    font-size: 3rem;
+                    margin-bottom: 4rem;
+                }
+            }
+        }
+    }
 
     &__image {
         height: auto;
@@ -10,13 +30,7 @@
         }
     }
 
-    &__left {
-        display: none;
-    }
-
     &__right {
-        max-width: 400px;
-        margin: auto;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
 
@@ -30,6 +44,12 @@
                 left: auto !important;
                 width: 100%;
             }
+        }
+    }
+
+    & + .media-block {
+        @media screen and (min-width: 1024px) {
+            margin-top: -4rem;
         }
     }
 }
