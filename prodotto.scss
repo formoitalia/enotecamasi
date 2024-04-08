@@ -75,10 +75,10 @@
                 justify-content: start;
             }
 
-            &__title
+            &__title,
             &__body {
-                padding-left: 1rem;
-                padding-right: 1rem;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
             }
 
             &__body {
