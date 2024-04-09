@@ -95,5 +95,5 @@ function headerMenu() {
 }
 
 addEventListener("DOMContentLoaded", () => {
-    headerMenu()
+    setTimeout(() => headerMenu(), 1000)
 })
