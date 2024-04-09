@@ -85,6 +85,8 @@ setTimeout(() => {
 }, 500)
 
 function headerMenu() {
+    if (document.querySelector('.cust_menu_container')) return clearInterval(i)
+
     let customMenuCointainer = document.createElement('div')
     customMenuCointainer.classList.add('cust_menu_container')
 
@@ -92,8 +94,7 @@ function headerMenu() {
     customMenuCointainer.innerHTML = menuList
 
     document.querySelector("header > .wrap > .nav").append(customMenuCointainer)
+    console.log('ciao2');
 }
 
-addEventListener("DOMContentLoaded", () => {
-    setTimeout(() => headerMenu(), 1000)
-})
+const i = setInterval(() => headerMenu(), 200)
