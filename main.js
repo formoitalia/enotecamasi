@@ -94,7 +94,6 @@ function headerMenu() {
     customMenuCointainer.innerHTML = menuList
 
     document.querySelector("header > .wrap > .nav").append(customMenuCointainer)
-    console.log('ciao2');
 }
 
 const i = setInterval(() => headerMenu(), 200)
