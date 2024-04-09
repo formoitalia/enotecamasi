@@ -53,7 +53,7 @@ header {
     .nav {
         display: flex;
         align-items: normal;
-        gap: 1rem;
+        gap: 2rem;
 
         .nav__logo {
             order: -1;
@@ -117,8 +117,8 @@ header {
         & > .site-nav {
             &__menu__item {
                 margin: 0;
-                padding-right: 1.25rem;
-                padding-left: 1.25rem;
+                padding-right: .75rem;
+                padding-left: .75rem;
 
                 & > .site-nav__menu__link {
                     min-width: 50px;
