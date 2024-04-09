@@ -53,6 +53,7 @@ header {
     .nav {
         display: flex;
         align-items: normal;
+        gap: 1rem;
 
         .nav__logo {
             order: -1;
