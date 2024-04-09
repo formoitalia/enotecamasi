@@ -83,3 +83,17 @@ setTimeout(() => {
         })
     }
 }, 500)
+
+function headerMenu() {
+    let customMenuCointainer = document.createElement('div')
+    customMenuCointainer.classList.add('cust_menu_container')
+
+    let menuList = document.querySelector(".site-nav__menu ul.site-nav__menu__list").innerHTML
+    customMenuCointainer.innerHTML = menuList
+
+    document.querySelector("header > .wrap > .nav").append(customMenuCointainer)
+}
+
+addEventListener("DOMContentLoaded", () => {
+    headerMenu()
+})

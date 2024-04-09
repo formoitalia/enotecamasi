@@ -1,5 +1,9 @@
 @import url("https://use.typekit.net/dly8jpu.css");
 
+:root {
+    --color-brand-dark: #2A2618;
+}
+
 /* -----------------------------------------------------------------------------
  * VARS
  ----------------------------------------------------------------------------- */
@@ -30,7 +34,6 @@ body {
 
 body,
 main,
-header,
 .card,
 .product-box {
     background-color: #FBF9F5;
