@@ -161,6 +161,9 @@
         &__item {
             padding: 1rem;
             border: 1px solid;
+            &:not(:last-child) {
+                margin-bottom: .5rem;
+            }
         }
     }
 }
@@ -168,6 +171,8 @@
 .order_summary {
     &__line-item {
         flex-direction: row;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
 
         &__image {
             flex: none;
