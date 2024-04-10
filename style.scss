@@ -46,6 +46,10 @@
     }
 }
 
+.button--primary {
+    @extend .btn;
+}
+
 @import "parts";
 @import "commerce";
 @import "categorie";

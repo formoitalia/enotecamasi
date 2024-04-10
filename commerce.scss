@@ -116,8 +116,31 @@
  * CHECKOUT
  ----------------------------------------------------------------------------- */
 .cart-section {
+    padding: 1rem;
+
+    @media screen and (min-width: 1024px) {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .title {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+    }
+
     &__wrap {
-        margin-bottom: 0.25rem!important;
+        margin: 0 auto !important;
+        padding: 1rem !important;
+
+        .cart-section__wrap {
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+        }
+    }
+
+    .button--primary {
+        @extend .btn;
+        text-align: center;
     }
 }
 
@@ -210,7 +233,6 @@
 
 .coupon__wrap {
     border-top: 1px solid var(--color-gray-300);
-    padding-top: 1rem;
 
     .coupon {
         background-color: transparent;
@@ -267,8 +289,8 @@
 .cart__summary {
     &__delivery {
         background-color: transparent;
-        border-top: 1px solid var(--color-gray-300);
-        border-bottom: 1px solid var(--color-gray-300);
+        border-top: 1px solid var(--color-brand-dark);
+        border-bottom: 1px solid var(--color-brand-dark);
         padding: 0.5rem;
         font-size: .85rem;
         font-style: italic;
@@ -294,6 +316,22 @@
     &__total {
         padding-top: 1.2rem;
         font-size: 1.1rem;
+    }
+}
+
+/* -----------------------------------------------------------------------------
+ * CHECKOUT
+ ----------------------------------------------------------------------------- */
+.insert {
+    &__wrapper {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    &__title {
+        @extend .title;
+        text-transform: uppercase;
+        font-size: 1.2rem;
     }
 }
 
