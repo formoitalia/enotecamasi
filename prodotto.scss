@@ -2,7 +2,11 @@
  * CATEGORIA PRODOTTI
  ----------------------------------------------------------------------------- */
 .wrap .category-intro {
-    margin: 4rem auto;
+    margin: 2rem auto;
+
+    @media screen and (min-width: 1024px) {
+        margin: 4rem auto;
+    }
 
     &__title {
         color: var(--color-black);
@@ -27,9 +31,13 @@
 
     &__description {
         .text_block {
-            font-size: 1.75rem;
             max-width: none;
             text-wrap: balance;
+            font-size: 1.25rem;
+
+            @media screen and (min-width: 1024px) {
+                font-size: 1.75rem;
+            }
         }
     }
 }
