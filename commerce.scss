@@ -1,10 +1,66 @@
 /* -----------------------------------------------------------------------------
  * AGGIUNTA AL CARRELLO
  ----------------------------------------------------------------------------- */
+.dialog__frame,
+.market-dialog__frame {
+    max-width: 30rem;
+}
+
 .dialog:before,
 .market-dialog:before {
     background-color: var(--color-black);
     opacity: .9;
+}
+
+.dialog {
+    &__close {
+        svg {
+            transform: scale(.75);
+        }
+    }
+
+    &__header {
+        margin-bottom: 1rem;
+    }
+
+    &__body {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    &__frame {
+        .feedback-dialog__success {
+            svg {
+                display: none;
+            }
+
+            @extend .title;
+            font-size: 1rem;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+
+    &__footer {
+        padding: 1rem;
+        padding-top: 0;
+
+        .feedback-dialog__buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .feedback-dialog__buttons__cart {
+                @extend .btn;
+            }
+
+            .feedback-dialog__buttons__close {
+                @extend .btn;
+                opacity: .3;
+            }
+        }
+
+    }
 }
 
 .feedback-dialog {
@@ -26,10 +82,13 @@
     }
 
     &__product {
+        margin-top: 1rem;
+        margin-bottom: 0;
+
         img {
             width: 100%;
             height: 100%;
-            max-width: 12rem;
+            max-width: 20rem;
         }
 
         &__name {
