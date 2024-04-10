@@ -60,6 +60,25 @@
     opacity: .5;
 }
 
+.button--primary-link {
+    background-color: var(--color-brand-dark);
+    color: var(--color-white);
+    font-weight: 600;
+    text-transform: uppercase
+}
+
+.wrapper_account .button--primary,
+.wrapper_account .feedback-dialog__buttons__cart,
+.checkout-page .button--submit {
+    background: transparent !important;
+    color: var(--color-black);
+    border: 0;
+
+    &:hover {
+        color: var(--color-black) !important;
+    }
+}
+
 @import "parts";
 @import "commerce";
 @import "categorie";
