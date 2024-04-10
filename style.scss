@@ -14,7 +14,7 @@
 
 .title {
     @extend .font-serif;
-    font-weight: 100;
+    font-weight: 100 !important;
 }
 
 @import "parts";

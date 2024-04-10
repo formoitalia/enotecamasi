@@ -1,6 +1,15 @@
+.card, .product-box {
+    font-family: inherit;
+}
+
 .media-block {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 1rem;
+
+    &:first-child,
+    &:last-child, {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
 
     &__left {
         text-align: center;

@@ -1,34 +1,6 @@
-
 /* -----------------------------------------------------------------------------
  * NAVBAR
  ----------------------------------------------------------------------------- */
-//  header {
-//     height: auto;
-//     padding-top: .5rem;
-//     padding-bottom: .5rem;
-
-//     @media screen and (min-width: 1024px) {
-//         padding-top: 1.5rem;
-//         padding-bottom: 1.5rem;
-//     }
-
-//     .nav {
-//         &__menu {
-//             justify-content: start !important;
-//         }
-
-//         &__logo {
-//             img {
-//                 height: 80px;
-//                 width: auto;
-//                 object-fit: contain;
-//             }
-//         }
-
-//
-//     }
-// }
-
 header {
     max-width: none;
     background-color: var(--color-brand-dark);
@@ -159,11 +131,6 @@ header {
     display: none !important;
 }
 
-.wrap {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
 /* -----------------------------------------------------------------------------
  * FOOTER
  ----------------------------------------------------------------------------- */
@@ -171,8 +138,8 @@ body .footer {
     color: var(--color-white);
     background-color: var(--color-brand-dark);
     font-family: "expressway", sans-serif;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 
     a {
         color: var(--color-white);
