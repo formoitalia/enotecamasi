@@ -73,7 +73,7 @@
         }
 
         @media screen and (min-width: 1024px) {
-            flex: 0 0 70%;
+            flex: 0 0 60%;
             padding: 0 0 0 2rem;
         }
 
@@ -91,7 +91,7 @@
 
     &__content {
         @media screen and (min-width: 1024px) {
-            flex: 0 0 30%;
+            flex: 0 0 40%;
             order: -1;
         }
 
