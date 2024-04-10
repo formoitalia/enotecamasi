@@ -14,7 +14,8 @@ if (hasTrustPilot) {
         </div>
     `
 
-    mainWrapper.parentNode.insertBefore(trustpilotbox, mainWrapper.nextSibling)
+    let footerLogo = document.querySelector('.footer__logo')
+    footerLogo.parentNode.insertBefore(trustpilotbox, footerLogo.nextSibling)
 
     const script = document.createElement('script')
     script.src = '//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js'

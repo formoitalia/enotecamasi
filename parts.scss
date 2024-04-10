@@ -155,9 +155,13 @@ header {
     }
 }
 
-
 .category-menu {
     display: none !important;
+}
+
+.wrap {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 /* -----------------------------------------------------------------------------
@@ -167,8 +171,8 @@ body .footer {
     color: var(--color-white);
     background-color: var(--color-brand-dark);
     font-family: "expressway", sans-serif;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
     a {
         color: var(--color-white);
@@ -180,10 +184,10 @@ body .footer {
         gap: 1rem;
         padding: 0;
         margin: 0 auto;
-        max-width: 1350px;
+        max-width: 1540px;
 
         @media screen and (min-width: 1024px) {
-            gap: 4rem;
+            gap: 2rem;
             text-align: left;
         }
 
