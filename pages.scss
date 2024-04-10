@@ -4,9 +4,13 @@
     }
 }
 
+.gtm-product-list {
+    padding: 2rem 1rem 6rem;
+}
+
 .product-list {
     max-width: 1540px;
-    padding: 2rem 1rem 6rem;
+    padding: 0;
     display: grid;
     row-gap: 1rem;
     grid-template-columns: repeat(1, minmax(0, 1fr));
