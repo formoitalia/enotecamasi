@@ -64,6 +64,10 @@ header {
                 width: 20px;
                 height: 2px;
             }
+
+            .site-nav__toggle__label__item:first-child {
+                transform: rotate(45deg) translate(7px, 7px);
+            }
         }
 
         @media screen and (min-width: 1024px) {
