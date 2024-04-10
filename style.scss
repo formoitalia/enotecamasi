@@ -50,7 +50,8 @@
 }
 
 .button--primary,
-.button--submit {
+.button--submit
+.checkout-page .button--submit {
     @extend .btn;
 }
 
