@@ -49,8 +49,14 @@
     }
 }
 
-.button--primary {
+.button--primary,
+.button--submit {
     @extend .btn;
+}
+
+.button--secondary {
+    @extend .btn;
+    opacity: .5;
 }
 
 @import "parts";
@@ -72,7 +78,9 @@ body {
 body,
 main,
 .card,
-.product-box {
+.product-box,
+.cart-page,
+.checkout-page {
     background-color: #FBF9F5;
 }
 

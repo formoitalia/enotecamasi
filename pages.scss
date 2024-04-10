@@ -117,3 +117,50 @@
         }
     }
 }
+
+.tab-buttons__item {
+    @extend .title;
+}
+
+.checkout-page {
+    .address_form {
+        @media screen and (min-width: 1024px) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    .button--group-shipping {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        @media screen and (min-width: 1024px) {
+            flex-direction: row;
+        }
+    }
+
+    .confirm_order__info,
+    .checkout__header {
+        padding: 1rem;
+    }
+
+    .confirm_order__info {
+        .address__title {
+            display: block;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .payment-method {
+        &__title {
+            @extend .title;
+        }
+
+        &__item {
+            padding: 1rem;
+            border: 1px solid;
+        }
+    }
+}
