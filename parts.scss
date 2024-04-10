@@ -131,7 +131,7 @@ header {
                 & > ul {
                     position: absolute;
                     opacity: 0;
-                    background: var(--color-brand-dark);
+                    background-color: rgba(var(--color-brand-dark), .95);
                     top: 100%;
                     left: 0;
                     right: 0;
