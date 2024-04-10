@@ -35,14 +35,23 @@ if (document.body.classList.contains('category-page')) {
 // -------------------------------------------------------------------------
 // PRODUCT
 // -------------------------------------------------------------------------
-setTimeout(() => {
+function makeAdditionalProductInfoBox () {
     let productHeroContent = document.querySelector('.product-hero__content')
+    let productInfoOverflay = document.querySelector('.product-hero__info-overflay')
+
+    if (! productHeroContent || productInfoOverflay) return clearInterval(intervalProduct)
 
     if (productHeroContent) {
+        const toggleView = (el) => {
+            let showing = el.classList.contains('show')
+            showing ? el.classList.remove('show') : el.classList.add('show')
+        }
+
         let infoOverlay = document.createElement('div')
         infoOverlay.classList.add('product-hero__info-overflay')
 
-        infoOverlay.innerHTML = productHeroContent.innerHTML
+        infoOverlay.innerHTML += `<button class="product-hero__info-overflay-action">x</button>`
+        infoOverlay.innerHTML += productHeroContent.innerHTML
 
         let infoOverlayElement = document.body.appendChild(infoOverlay)
 
@@ -52,13 +61,8 @@ setTimeout(() => {
 
         infoOverlayBtn.innerHTML = 'Additional info on this wine'
 
-        infoOverlayBtn.addEventListener('click', () => {
-            let showing = infoOverlayElement.classList.contains('show')
-
-            // @todo -> click outside
-
-            showing ? infoOverlayElement.classList.remove('show') : infoOverlayElement.classList.add('show')
-        })
+        infoOverlayBtn.addEventListener('click', () => toggleView(infoOverlayElement))
+        infoOverlayElement.querySelector('.product-hero__info-overflay-action').addEventListener('click', () => toggleView(infoOverlayElement))
 
         productHeroContent.appendChild(infoOverlayBtn)
     }
@@ -83,10 +87,12 @@ setTimeout(() => {
             }
         })
     }
-}, 500)
+}
+
+const intervalProduct = setInterval(() => makeAdditionalProductInfoBox(), 200)
 
 function headerMenu() {
-    if (document.querySelector('.cust_menu_container')) return clearInterval(i)
+    if (document.querySelector('.cust_menu_container')) return clearInterval(intervalHeader)
 
     let customMenuCointainer = document.createElement('div')
     customMenuCointainer.classList.add('cust_menu_container')
@@ -97,4 +103,4 @@ function headerMenu() {
     document.querySelector("header > .wrap > .nav").append(customMenuCointainer)
 }
 
-const i = setInterval(() => headerMenu(), 200)
+const intervalHeader = setInterval(() => headerMenu(), 200)

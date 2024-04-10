@@ -266,6 +266,22 @@
             pointer-events: auto;
         }
 
+        &-action {
+            display: block;
+            margin-left: auto;
+            margin-bottom: 1rem;
+            appearance: none;
+            border: 0;
+            padding: .5rem;
+            font-size: 1.1rem;
+            background-color: transparent;
+            cursor: pointer;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
         .product-hero {
             &__title {
                 font-size: .75rem;
