@@ -68,6 +68,10 @@ header {
             .site-nav__toggle__label__item:first-child {
                 transform: rotate(45deg) translate(7px, 7px);
             }
+
+            .site-nav__menu {
+                background-color: var(--color-brand-dark);
+            }
         }
 
         @media screen and (min-width: 1024px) {
