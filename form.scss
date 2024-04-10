@@ -10,7 +10,7 @@ label.form__label {
 }
 
 input[type=checkbox] {
-    & > label {
+    & > .form__label {
         font-size: .8rem;
     }
 }
