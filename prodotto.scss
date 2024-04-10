@@ -41,7 +41,8 @@
     padding: 0;
 
     @media screen and (min-width: 1024px) {
-        padding-top: 2rem;
+        padding: 2rem;
+        margin: 0;
     }
 
     &__title {
