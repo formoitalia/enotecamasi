@@ -324,14 +324,33 @@
  ----------------------------------------------------------------------------- */
 .insert {
     &__wrapper {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 
     &__title {
         @extend .title;
         text-transform: uppercase;
         font-size: 1.2rem;
+    }
+
+    &_email_section_master_title {
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    &_email_section_master_subtitle {
+        font-size: .9rem;
+        line-height: 1.3em;
+    }
+
+    &_email_section_detail_button {
+        text-align: center;
+    }
+
+    &_email_section_detail_flag {
+        text-align: center;
+        justify-content: center;
     }
 }
 

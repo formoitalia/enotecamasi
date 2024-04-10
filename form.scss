@@ -1,0 +1,16 @@
+.form__label {
+    text-transform: uppercase !important;
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.form__input {
+    padding: 0.4rem 0.6rem;
+    background-color: transparent;
+}
+
+input[type=checkbox] {
+    & > label {
+        font-size: .8rem;
+    }
+}
