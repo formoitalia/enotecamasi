@@ -126,6 +126,8 @@
     .title {
         text-transform: uppercase;
         font-size: 1.2rem;
+        max-width: 40rem;
+        margin: auto;
     }
 
     &__wrap {
@@ -332,6 +334,8 @@
         @extend .title;
         text-transform: uppercase;
         font-size: 1.2rem;
+        max-width: 40rem;
+        margin: auto;
     }
 
     &_email_section_master_title {

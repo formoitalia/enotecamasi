@@ -5,12 +5,14 @@ label.form__label {
 }
 
 .form__input {
-    padding: 0.4rem 0.6rem;
-    background-color: transparent;
+    padding: 0.4rem 0.6rem !important;
+    background-color: transparent !important;
 }
 
 input[type=checkbox] {
-    & > .form__label {
+    margin-right: 0;
+
+    & + .form__label {
         font-size: .8rem;
     }
 }
