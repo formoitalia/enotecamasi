@@ -341,24 +341,28 @@
         margin-bottom: 1rem;
     }
 
-    &_email_section_master_title {
-        font-weight: 600;
-        font-size: 1rem;
-        text-transform: uppercase;
-    }
+    &_email_section {
+        height: 100%;
 
-    &_email_section_master_subtitle {
-        font-size: .9rem;
-        line-height: 1.3em;
-    }
+        &_master_title {
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
 
-    &_email_section_detail_button {
-        text-align: center;
-    }
+        &_master_subtitle {
+            font-size: .9rem;
+            line-height: 1.3em;
+        }
 
-    &_email_section_detail_flag {
-        text-align: center;
-        justify-content: center;
+        // &_detail_button {
+        //     text-align: center;
+        // }
+
+        // &_detail_flag {
+        //     text-align: center;
+        //     justify-content: center;
+        // }
     }
 }
 

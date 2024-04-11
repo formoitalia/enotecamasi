@@ -58,7 +58,9 @@
         letter-spacing: -.01em;
 
         @media screen and (min-width: 1024px) {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
+            letter-spacing: -.03em;
+            margin-top: auto;
         }
     }
 
@@ -94,14 +96,16 @@
 
     &__content {
         @media screen and (min-width: 1024px) {
-            flex: 0 0 30%;
+            flex: 0 0 35%;
             order: -1;
             margin-right: auto;
         }
 
         display: flex;
         flex-direction: column;
-        justify-content: end;
+        justify-content: start;
+        padding: 0;
+        font-family: inherit;
 
         .product-hero__description,
         .product-hero__info-list {
@@ -124,6 +128,7 @@
 
     &__price {
         font-size: 1rem;
+        font-weight: 700;
         padding-top: 0.75rem;
 
         @media screen and (min-width: 1024px) {
@@ -207,9 +212,11 @@
         border-top: 1px solid var(--color-black);
         order: 99999;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
 
         @media screen and (min-width: 1024px) {
+            flex-direction: row;
             padding-bottom: 2rem;
         }
 
@@ -299,6 +306,7 @@
         .product-hero {
             &__title {
                 font-size: .75rem;
+                margin-top: auto;
             }
 
             &__content__wrap {

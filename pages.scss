@@ -177,6 +177,10 @@
         &__image {
             flex: none;
             margin-right: 1rem;
+
+            img {
+                object-fit: contain;
+            }
         }
 
         &__content {
