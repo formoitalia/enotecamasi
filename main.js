@@ -37,9 +37,9 @@ if (document.body.classList.contains('category-page')) {
 // -------------------------------------------------------------------------
 function makeAdditionalProductInfoBox () {
     let productHeroContent = document.querySelector('.product-hero__content')
-    let productInfoOverflay = document.querySelector('.product-hero__info-overflay')
+    let productInfoOverlay = document.querySelector('.product-hero__info-overlay')
 
-    if (! productHeroContent || productInfoOverflay) return clearInterval(intervalProduct)
+    if (! productHeroContent || productInfoOverlay) return clearInterval(intervalProduct)
 
     if (productHeroContent) {
         const toggleView = (el) => {
@@ -48,21 +48,21 @@ function makeAdditionalProductInfoBox () {
         }
 
         let infoOverlay = document.createElement('div')
-        infoOverlay.classList.add('product-hero__info-overflay')
+        infoOverlay.classList.add('product-hero__info-overlay')
 
-        infoOverlay.innerHTML += `<button class="product-hero__info-overflay-action">x</button>`
+        infoOverlay.innerHTML += `<button class="product-hero__info-overlay-action">x</button>`
         infoOverlay.innerHTML += productHeroContent.innerHTML
 
         let infoOverlayElement = document.body.appendChild(infoOverlay)
 
         // -------------------------------------------------------------------------
         let infoOverlayBtn = document.createElement('button')
-        infoOverlayBtn.classList.add('product-hero__info-overflay-button')
+        infoOverlayBtn.classList.add('product-hero__info-overlay-button')
 
         infoOverlayBtn.innerHTML = 'Additional info on this wine'
 
         infoOverlayBtn.addEventListener('click', () => toggleView(infoOverlayElement))
-        infoOverlayElement.querySelector('.product-hero__info-overflay-action').addEventListener('click', () => toggleView(infoOverlayElement))
+        infoOverlayElement.querySelector('.product-hero__info-overlay-action').addEventListener('click', () => toggleView(infoOverlayElement))
 
         productHeroContent.appendChild(infoOverlayBtn)
     }
@@ -89,7 +89,28 @@ function makeAdditionalProductInfoBox () {
     }
 }
 
+function checkProductDetailsLink () {
+    let productHeroContent = document.querySelector('.product-hero__content')
+    let productHeroContentLinksWrap = document.querySelector('.product-hero__content-links-wrap')
+    let productDetailItemsLinks = document.querySelectorAll('.product-detail__item a')
+
+    if (! productHeroContent || productHeroContentLinksWrap || ! productDetailItemsLinks.length) return clearInterval(intervalProductDetails)
+
+    productHeroContentLinksWrap = document.createElement('div')
+    productHeroContentLinksWrap.classList.add('product-hero__content-links-wrap')
+
+    if (productDetailItemsLinks.length) {
+        productDetailItemsLinks.forEach(item => {
+            productHeroContentLinksWrap.innerHTML += item.outerHTML
+        })
+    }
+
+    console.log(productHeroContentLinksWrap);
+    productHeroContent.appendChild(productHeroContentLinksWrap)
+}
+
 const intervalProduct = setInterval(() => makeAdditionalProductInfoBox(), 200)
+const intervalProductDetails = setInterval(() => checkProductDetailsLink(), 200)
 
 function headerMenu() {
     if (document.querySelector('.cust_menu_container')) return clearInterval(intervalHeader)
