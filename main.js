@@ -59,7 +59,6 @@ function makeAdditionalProductInfoBox () {
         let infoOverlayBtn = document.createElement('button')
         infoOverlayBtn.classList.add('product-hero__info-overlay-button')
 
-        let deliveryLabelsDivs = []
         let labels = {
             it: 'Informazioni aggiuntive',
             en: 'Additional info on this wine',
@@ -68,7 +67,7 @@ function makeAdditionalProductInfoBox () {
 
         let language = document.documentElement.lang
 
-        infoOverlayBtn.innerHTML = deliveryLabelsDivs[language]
+        infoOverlayBtn.innerHTML = labels[language]
 
         infoOverlayBtn.addEventListener('click', () => toggleView(infoOverlayElement))
         infoOverlayElement.querySelector('.product-hero__info-overlay-action').addEventListener('click', () => toggleView(infoOverlayElement))
