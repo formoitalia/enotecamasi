@@ -121,7 +121,7 @@ const intervalProduct = setInterval(() => makeAdditionalProductInfoBox(), 200)
 const intervalProductDetails = setInterval(() => checkProductDetailsLink(), 200)
 
 function headerMenu() {
-    if (document.querySelector('.cust_menu_container')) return clearInterval(intervalHeader)
+    if (document.querySelector('.cust_menu_container')) return
 
     let customMenuCointainer = document.createElement('div')
     customMenuCointainer.classList.add('cust_menu_container')
