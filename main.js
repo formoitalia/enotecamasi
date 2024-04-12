@@ -132,8 +132,6 @@ function headerMenu() {
 
     let menuList = document.querySelector(".site-nav__menu ul.site-nav__menu__list")
 
-    console.log(menuList)
-
     if (menuList) {
         customMenuCointainer.innerHTML = menuList.innerHTML
         document.querySelector("header > .wrap > .nav").append(customMenuCointainer)
