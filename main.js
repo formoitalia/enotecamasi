@@ -125,9 +125,13 @@ const intervalProduct = setInterval(() => makeAdditionalProductInfoBox(), 350)
 const intervalProductDetails = setInterval(() => checkProductDetailsLink(), 350)
 
 function headerMenu() {
-    if (document.querySelector('.cust_menu_container')) return
+    let customMenuCointainer = document.querySelector('.cust_menu_container')
 
-    let customMenuCointainer = document.createElement('div')
+    console.log(customMenuCointainer)
+
+    if (customMenuCointainer) return false
+
+    customMenuCointainer = document.createElement('div')
     customMenuCointainer.classList.add('cust_menu_container')
 
     let menuList = document.querySelector(".site-nav__menu ul.site-nav__menu__list")
@@ -135,8 +139,6 @@ function headerMenu() {
     if (menuList) {
         customMenuCointainer.innerHTML = menuList.innerHTML
         document.querySelector("header > .wrap > .nav").append(customMenuCointainer)
-    } else {
-        return clearInterval(intervalHeader)
     }
 }
 
