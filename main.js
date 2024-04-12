@@ -100,7 +100,7 @@ function makeAdditionalProductInfoBox () {
 function checkProductDetailsLink () {
     let productHeroContent = document.querySelector('.product-hero__content')
     let productHeroContentLinksWrap = document.querySelector('.product-hero__content-links-wrap')
-    let productDetailItemsLinks = document.querySelectorAll('.product-detail__item a')
+    let productDetailItemsLinks = document.querySelectorAll('.product-detail__item')
 
     if (! productHeroContent || productHeroContentLinksWrap || ! productDetailItemsLinks.length) return clearInterval(intervalProductDetails)
 
@@ -109,16 +109,20 @@ function checkProductDetailsLink () {
 
     if (productDetailItemsLinks.length) {
         productDetailItemsLinks.forEach(item => {
-            item.target = '_blank'
-            productHeroContentLinksWrap.innerHTML += item.outerHTML
+            let a = item.querySelector('a')
+
+            if (a) {
+                a.target = '_blank'
+                productHeroContentLinksWrap.innerHTML += a.outerHTML
+            }
         })
     }
 
     productHeroContent.appendChild(productHeroContentLinksWrap)
 }
 
-const intervalProduct = setInterval(() => makeAdditionalProductInfoBox(), 200)
-const intervalProductDetails = setInterval(() => checkProductDetailsLink(), 200)
+const intervalProduct = setInterval(() => makeAdditionalProductInfoBox(), 350)
+const intervalProductDetails = setInterval(() => checkProductDetailsLink(), 350)
 
 function headerMenu() {
     if (document.querySelector('.cust_menu_container')) return
@@ -127,6 +131,8 @@ function headerMenu() {
     customMenuCointainer.classList.add('cust_menu_container')
 
     let menuList = document.querySelector(".site-nav__menu ul.site-nav__menu__list")
+
+    console.log(menuList)
 
     if (menuList) {
         customMenuCointainer.innerHTML = menuList.innerHTML
