@@ -1,11 +1,11 @@
 .category-intro__title {
-    [title="MASI"],
-    [title="MASI CLASSICI"],
-    [title="CANTINA PRIVATA BOSCAINI"],
-    [title="SEREGO ALIGHIERI"],
-    [title="BOSSI FEDRIGOTTI"],
-    [title="MASI TUPUNGATO"],
-    [title="CANEVEL"] {
+    &[title="MASI"],
+    &[title="MASI CLASSICI"],
+    &[title="CANTINA PRIVATA BOSCAINI"],
+    &[title="SEREGO ALIGHIERI"],
+    &[title="BOSSI FEDRIGOTTI"],
+    &[title="MASI TUPUNGATO"],
+    &[title="CANEVEL"] {
         background-size: contain;
         background-repeat: no-repeat;
         color: transparent !important;
