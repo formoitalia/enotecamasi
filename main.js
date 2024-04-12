@@ -29,7 +29,7 @@ if (hasTrustPilot) {
 // -------------------------------------------------------------------------
 if (document.body.classList.contains('category-page')) {
     let title = mainWrapper.querySelector('.category-intro__title')
-    title.title = title.innerText
+    if (title) title.title = title.innerText
 }
 
 // -------------------------------------------------------------------------
@@ -126,8 +126,6 @@ const intervalProductDetails = setInterval(() => checkProductDetailsLink(), 350)
 
 function headerMenu() {
     let customMenuCointainer = document.querySelector('.cust_menu_container')
-
-    console.log(customMenuCointainer)
 
     if (customMenuCointainer) return false
 
