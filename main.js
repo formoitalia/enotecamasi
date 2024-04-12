@@ -14,8 +14,8 @@ if (hasTrustPilot) {
         </div>
     `
 
-    let footerLogo = document.querySelector('.footer__logo')
-    footerLogo.parentNode.insertBefore(trustpilotbox, footerLogo.nextSibling)
+    // let footerLogo = document.querySelector('.footer__logo')
+    mainWrapper.parentNode.insertBefore(trustpilotbox, mainWrapper.nextSibling)
 
     const script = document.createElement('script')
     script.src = '//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js'
@@ -39,7 +39,7 @@ function makeAdditionalProductInfoBox () {
     let productHeroContent = document.querySelector('.product-hero__content')
     let productInfoOverlay = document.querySelector('.product-hero__info-overlay')
 
-    if (! productHeroContent || productInfoOverlay) return clearInterval(intervalProduct)
+    if (! productHeroContent || productInfoOverlay) return
 
     if (productHeroContent) {
         const toggleView = (el) => {
@@ -109,11 +109,11 @@ function checkProductDetailsLink () {
 
     if (productDetailItemsLinks.length) {
         productDetailItemsLinks.forEach(item => {
+            item.target = '_blank'
             productHeroContentLinksWrap.innerHTML += item.outerHTML
         })
     }
 
-    console.log(productHeroContentLinksWrap);
     productHeroContent.appendChild(productHeroContentLinksWrap)
 }
 

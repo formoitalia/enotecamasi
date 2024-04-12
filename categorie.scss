@@ -1,21 +1,29 @@
 .category-intro__title {
-    background-size: contain;
-    background-repeat: no-repeat;
-    color: transparent !important;
-    font-size: 0px !important;
-    background-position: center center;
-    padding: 0 !important;
-    margin-bottom: 3rem !important;
-
-    &::after {
-        transform: translateY(1.5rem);
-    }
-
-    @media screen and (min-width: 1024px) {
-        margin-bottom: 8rem !important;
+    [title="MASI"],
+    [title="MASI CLASSICI"],
+    [title="CANTINA PRIVATA BOSCAINI"],
+    [title="SEREGO ALIGHIERI"],
+    [title="BOSSI FEDRIGOTTI"],
+    [title="MASI TUPUNGATO"],
+    [title="CANEVEL"] {
+        background-size: contain;
+        background-repeat: no-repeat;
+        color: transparent !important;
+        font-size: 0px !important;
+        background-position: center center;
+        padding: 0 !important;
+        margin-bottom: 3rem !important;
 
         &::after {
-            transform: translateY(4rem);
+            transform: translateY(1.5rem);
+        }
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 8rem !important;
+
+            &::after {
+                transform: translateY(4rem);
+            }
         }
     }
 }

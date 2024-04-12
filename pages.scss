@@ -8,6 +8,18 @@
     padding: 2rem 1rem 6rem;
 }
 
+.product-page {
+    .gtm-product-list {
+        .related-product {
+            .product-list {
+                @media screen and (min-width: 1024px) {
+                    grid-template-columns: repeat(4, minmax(0, 1fr));
+                }
+            }
+        }
+    }
+}
+
 .product-list {
     max-width: 1540px;
     padding: 0;

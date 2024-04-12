@@ -1,19 +1,15 @@
 .trustpilot-widget {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    padding: .85em;
-    background-color: #fff;
-    max-width: 280px;
-    margin: auto;
+    padding: 1.5rem 1em;
     position: relative;
+    border-top: 1px solid var(--color-brand-dark);
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: .25em;
-        left: .25em;
-        right: .25em;
-        bottom: .25em;
-        border: 1px solid var(--color-brand-dark);
-    }
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     top: .25em;
+    //     left: .25em;
+    //     right: .25em;
+    //     bottom: .25em;
+    //     border: 1px solid var(--color-brand-dark);
+    // }
 }
