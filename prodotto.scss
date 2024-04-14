@@ -10,11 +10,16 @@
 
     &__title {
         color: var(--color-black);
-        font-size: 3.5rem;
         font-weight: 700;
         position: relative;
         padding-bottom: 3rem;
         margin-bottom: 2rem;
+
+        font-size: 1.5rem;
+
+        @media screen and (min-width: 1024px) {
+            font-size: 3.5rem;
+        }
 
         &::after {
             content: '';

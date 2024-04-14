@@ -1,20 +1,4 @@
 .category-intro__title {
-    &:not([title="MASI"]),
-    &:not([title="MASI CLASSICI"]),
-    &:not([title="CANTINA PRIVATA BOSCAINI"]),
-    &:not([title="SEREGO ALIGHIERI"]),
-    &:not([title="BOSSI FEDRIGOTTI"]),
-    &:not([title="MASI TUPUNGATO"]),
-    &:not([title="CANEVEL"]) {
-        font-size: 2rem;
-
-        @media screen and (min-width: 1024px) {
-            font-size: 3rem;
-        }
-    }
-}
-
-.category-intro__title {
     &[title="MASI"],
     &[title="MASI CLASSICI"],
     &[title="CANTINA PRIVATA BOSCAINI"],
