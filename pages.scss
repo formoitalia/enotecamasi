@@ -211,21 +211,26 @@
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 .newrosadeimasi {
-    .text-block {
+    .text_block {
         background-color: #914654;
-        color: #fff;
+        color: rgba(255,255,255,.7);
         padding: 1rem;
-        font: 1.2rem;
+        font-size: 1.3rem;
         position: relative;
+
+        span:first-child {
+            color: white;
+            margin-right: .2rem;
+        }
 
         &::before {
             content: '';
 
             position: absolute;
-            top: -2px;
-            right: -2px;
-            bottom: -2px;
-            left: -2px;
+            top: -5px;
+            right: -5px;
+            bottom: -5px;
+            left: -5px;
             border: 1px dashed #914654;
         }
     }
