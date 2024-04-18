@@ -206,3 +206,27 @@
         }
     }
 }
+
+
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+.newrosadeimasi {
+    .text-block {
+        background-color: #914654;
+        color: #fff;
+        padding: 1rem;
+        font: 1.2rem;
+        position: relative;
+
+        &::before {
+            content: '';
+
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            bottom: -2px;
+            left: -2px;
+            border: 1px dashed #914654;
+        }
+    }
+}

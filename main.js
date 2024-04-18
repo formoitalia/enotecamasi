@@ -141,3 +141,10 @@ function headerMenu() {
 }
 
 const intervalHeader = setInterval(() => headerMenu(), 200)
+
+function setup() {
+    let page = window.__NEXT_DATA__.query.page
+    page ? document.body.classList.add(page) : null
+}
+
+setup()
