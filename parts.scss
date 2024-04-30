@@ -35,6 +35,8 @@ header {
         .nav__logo {
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
+            width: 100%;
+            max-width: 250px;
 
             @media screen and (min-width: 1024px) {
                 order: -1;
