@@ -101,6 +101,8 @@ function makeAdditionalProductInfoBox () {
 
 function checkProductDetailsLink () {
     let productHeroContent = document.querySelector('.product-hero__content')
+    if (! productHeroContent) return
+
     let productHeroContentLinksWrap = document.querySelector('.product-hero__content-links-wrap')
     let productDetailItemsLinks = [...document.querySelectorAll('.product-detail__item')]
 
