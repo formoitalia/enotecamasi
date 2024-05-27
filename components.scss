@@ -105,16 +105,17 @@
     margin: 5rem auto;
     text-align: center;
     font-size: 1.7rem;
+}
 
-    .title_block {
-        @extend .title;
-        font-size: 2rem;
-        margin-bottom: 1rem;
+.title_block {
+    @extend .title;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.1em;
 
-        @media screen and (min-width: 1560px) {
-            font-size: 3rem;
-            margin-bottom: 4rem;
-        }
+    @media screen and (min-width: 1560px) {
+        font-size: 3rem;
+        margin-bottom: 4rem;
     }
 }
 
