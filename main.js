@@ -72,7 +72,9 @@ function makeAdditionalProductInfoBox () {
         infoOverlayBtn.addEventListener('click', () => toggleView(infoOverlayElement))
         infoOverlayElement.querySelector('.product-hero__info-overlay-action').addEventListener('click', () => toggleView(infoOverlayElement))
 
-        productHeroContent.appendChild(infoOverlayBtn)
+        let productHeroContentLinksWrap = document.querySelector('.product-hero__content-links-wrap')
+
+        if (productHeroContentLinksWrap) productHeroContentLinksWrap.appendChild(infoOverlayBtn)
     }
 
     let productDetailItems = document.querySelectorAll('.product-detail__item')
@@ -100,12 +102,34 @@ function makeAdditionalProductInfoBox () {
 function checkProductDetailsLink () {
     let productHeroContent = document.querySelector('.product-hero__content')
     let productHeroContentLinksWrap = document.querySelector('.product-hero__content-links-wrap')
-    let productDetailItemsLinks = document.querySelectorAll('.product-detail__item')
-
-    if (! productHeroContent || productHeroContentLinksWrap || ! productDetailItemsLinks.length) return clearInterval(intervalProductDetails)
+    let productDetailItemsLinks = [...document.querySelectorAll('.product-detail__item')]
 
     productHeroContentLinksWrap = document.createElement('div')
     productHeroContentLinksWrap.classList.add('product-hero__content-links-wrap')
+
+    productHeroContent.appendChild(productHeroContentLinksWrap)
+
+    // controllo se esiste il blocco specialpack -> se esiste viene messo in evidenza sotto al campo "aggiungi al carrello"
+    productDetailItemsLinks.forEach((item, i) => {
+        let title = item.querySelector('.product-detail__title')
+        let search = ['specialpack', 'confezione 6 bottiglie']
+
+        if (search.includes(title.innerText.toLowerCase())) {
+            let link = item.querySelector('.product-detail__content a')
+
+            if (link) {
+                let e = document.createElement('div')
+                e.classList.add('product-hero__content-link')
+                e.innerHTML = link.closest('div').innerHTML
+
+                productHeroContent.appendChild(e)
+            }
+
+            productDetailItemsLinks.splice(i, 1)
+        }
+    })
+
+    if (! productHeroContent || ! productDetailItemsLinks.length) return clearInterval(intervalProductDetails)
 
     if (productDetailItemsLinks.length) {
         productDetailItemsLinks.forEach(item => {
@@ -118,11 +142,11 @@ function checkProductDetailsLink () {
         })
     }
 
-    productHeroContent.appendChild(productHeroContentLinksWrap)
+    if (productHeroContentLinksWrap) return clearInterval(intervalProductDetails)
 }
 
-const intervalProduct = setInterval(() => makeAdditionalProductInfoBox(), 350)
-const intervalProductDetails = setInterval(() => checkProductDetailsLink(), 350)
+const intervalProductDetails = setInterval(() => checkProductDetailsLink(), 250)
+const intervalProduct = setInterval(() => makeAdditionalProductInfoBox(), 300)
 
 function headerMenu() {
     let customMenuCointainer = document.querySelector('.cust_menu_container')
