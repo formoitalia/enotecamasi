@@ -102,9 +102,14 @@
 .text_block {
     @extend .title;
     max-width: 50rem;
-    margin: 5rem auto;
+    margin: 1rem auto;
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 1.25rem;
+
+    @media screen and (min-width: 1024px) {
+        margin: 3rem auto;
+        font-size: 1.7rem;
+    }
 }
 
 .title_block {
