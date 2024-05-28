@@ -5,7 +5,11 @@
 }
 
 .gtm-product-list {
-    padding: 2rem 1rem 6rem;
+    padding: 1.5rem 1rem 3rem;
+
+    @media screen and (min-width: 1024px) {
+        padding: 2rem 1rem 6rem;
+    }
 }
 
 .product-page {
