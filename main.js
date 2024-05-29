@@ -137,7 +137,7 @@ function checkProductDetailsLink () {
         productDetailItemsLinks.forEach(item => {
             let a = item.querySelector('a')
 
-            if (a) {
+            if (a && a.innerText != '') {
                 a.target = '_blank'
                 productHeroContentLinksWrap.innerHTML += a.outerHTML
             }
