@@ -3,8 +3,11 @@
 }
 
 .media-block {
-    padding: 1rem;
     gap: 2rem;
+    padding: 1rem;
+    max-width: 1540px;
+    margin-left: auto;
+    margin-right: auto;
 
     @media screen and (min-width: 1024px) {
         gap: 0;
