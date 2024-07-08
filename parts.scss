@@ -27,6 +27,8 @@ header {
         align-items: normal;
         gap: 1rem;
         min-height: 50px;
+        max-width: 1540px;
+        margin: auto;
 
         @media screen and (min-width: 1560px) {
             gap: 2rem;
@@ -144,23 +146,35 @@ header {
                     align-items: center;
                 }
 
-                & > ul {
+                &::after {
                     position: absolute;
-                    opacity: 0;
                     background-color: var(--navbar-submenu);
+                    opacity: 0;
                     top: 100%;
                     left: 0;
                     right: 0;
-                    margin: 0;
+                    pointer-events: none;
+                    transition: opacity .3s ease;
+                }
+
+                & > ul {
+                    position: absolute;
+                    opacity: 0;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
                     pointer-events: none;
                     transition: opacity .3s ease;
                     padding: 1.5rem;
-
+                    max-width: 1540px;
+                    margin: 0 auto;
                     display: flex;
                     gap: 3rem;
+                    z-index: 1;
                 }
 
                 &:hover {
+                    &::after,
                     & > ul {
                         opacity: 1;
                         pointer-events: auto;
