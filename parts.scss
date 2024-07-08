@@ -147,6 +147,7 @@ header {
                 }
 
                 &::after {
+                    content: '';
                     position: absolute;
                     background-color: var(--navbar-submenu);
                     opacity: 0;
