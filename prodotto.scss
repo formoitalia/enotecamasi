@@ -105,11 +105,16 @@
             flex: 0 0 35%;
             order: -1;
             margin-right: auto;
+
+            padding-left: 0;
+            padding-right: 0;
         }
 
         display: flex;
         flex-direction: column;
         justify-content: start;
+        padding-left: .75rem;
+        padding-right: .75rem;
         font-family: inherit;
 
         .product-hero__description,
