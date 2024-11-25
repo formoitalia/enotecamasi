@@ -127,6 +127,14 @@ body.black-friday {
     }
 }
 
+main {
+    .wrap {
+        .text_block:nth-child(7) {
+            font-style: italic;
+        }
+    }
+}
+
 body,
 main,
 .card,
