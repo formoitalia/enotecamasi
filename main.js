@@ -172,9 +172,7 @@ function setup() {
     let page = window.__NEXT_DATA__ ? window.__NEXT_DATA__.query.page : false
     page ? document.body.classList.add(page) : null
 
-    console.log(document.body.classList)
-
-    if (page && ['home-page', 'black-friday'].includes(page)) {
+    if (document.body.classList.contains('home-page') || document.body.classList.contains('black-friday')) {
         document.body.classList.add('is-black-friday')
     }
 }
