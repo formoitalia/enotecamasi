@@ -97,8 +97,7 @@ body {
     font-family: "expressway", sans-serif;
 }
 
-body.home-page,
-body.black-friday {
+.is-black-friday {
     background-color: #010101;
     color: white;
 
@@ -125,10 +124,10 @@ body.black-friday {
             color: #fff;
         }
     }
+}
 
-    .market-dialog {
-        color: black;
-    }
+.market-dialog {
+    color: black;
 }
 
 body.home-page {
