@@ -169,10 +169,10 @@ function headerMenu() {
 const intervalHeader = setInterval(() => headerMenu(), 200)
 
 function setup() {
-    let page = window.__NEXT_DATA__.query.page
+    let page = window.__NEXT_DATA__ ? window.__NEXT_DATA__.query.page : false
     page ? document.body.classList.add(page) : null
 
-    console.log(page)
+    console.log(document.body.classList)
 
     if (page && ['home-page', 'black-friday'].includes(page)) {
         document.body.classList.add('is-black-friday')
