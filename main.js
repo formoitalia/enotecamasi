@@ -183,7 +183,7 @@ function checkForBanner() {
 
             return false
         }
-    } elseif (country != 'IT') {
+    } else if (country != 'IT') {
         return false
     };
 
