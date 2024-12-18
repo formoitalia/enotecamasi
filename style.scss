@@ -164,11 +164,15 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     margin: 40px auto;
     max-width: 50rem;
-    font-size: 2.3rem;
+    font-size: 1.5rem;
     font-family: baskerville-urw,sans-serif!important;
 
+    @media screen and (min-width: 1024px) {
+        font-size: 2.3rem;
+    }
+
     .blink {
-        animation: blinker 5s linear infinite;
+        animation: blinker 3s linear infinite;
     }
 }
 
