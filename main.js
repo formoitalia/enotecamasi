@@ -176,7 +176,11 @@ function checkForBanner() {
 
     if (banner) {
         if (country == 'IT') return false;
-        else banner.remove()
+        else {
+            banner.remove()
+            let bannerAfter = main.querySelector('.em-special-banner-after')
+            bannerAfter.remove()
+        }
     }
 
     const bannerHtml = `
@@ -187,10 +191,14 @@ function checkForBanner() {
     `
 
     const bannerElement = document.createElement('div')
+    const bannerElementAfter = document.createElement('p')
+    bannerElementAfter.classList.add('em-special-banner-after')
+
     bannerElement.innerHTML = bannerHtml
 
     let block = main.querySelector('.text_block')
     if (block) block.after(bannerElement)
+    if (block) block.after(bannerElementAfter)
 }
 
 function setup() {
