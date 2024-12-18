@@ -175,7 +175,7 @@ function checkForBanner() {
     let country = localStorage.getItem('masiagricola_prod_countryCode')
 
     if (banner) {
-        if (country == 'it') return false;
+        if (country == 'IT') return false;
         else banner.remove()
     }
 
@@ -201,9 +201,9 @@ function setup() {
     //     document.body.classList.add('is-black-friday')
     // }
     if (new Date() < new Date(1734606000000)) {
-        console.log('---')
+        console.log('----')
 
-        setInterval(() => checkForBanner(), 1000)
+        setInterval(() => checkForBanner(), 2000)
     }
 }
 
