@@ -181,8 +181,8 @@ function checkForBanner() {
 
     const bannerHtml = `
         <div class="em-special-banner">
-            <p>Inserisci il tuo ordine entro le 12:00 del 19.12</p>
-            <p>per ricevere il tuo vino entro Natale</p>
+            <p>Inserisci il tuo ordine entro le <span class="blink">12:00 del 19.12</span></p>
+            <p>per ricevere il tuo vino <span class="blink">entro Natale</span></p>
         </div>
     `
 
@@ -201,8 +201,6 @@ function setup() {
     //     document.body.classList.add('is-black-friday')
     // }
     if (new Date() < new Date(1734606000000)) {
-        console.log('----')
-
         setInterval(() => checkForBanner(), 2000)
     }
 }

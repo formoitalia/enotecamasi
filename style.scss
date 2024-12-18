@@ -166,7 +166,17 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 50rem;
     font-size: 2.3rem;
     font-family: baskerville-urw,sans-serif!important;
+
+    .blink {
+        animation: blinker 1s linear infinite;
+    }
 }
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
 
 @import "plugin";
 @import "form";
