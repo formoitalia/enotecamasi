@@ -180,8 +180,12 @@ function checkForBanner() {
             banner.remove()
             let bannerAfter = main.querySelector('.em-special-banner-after')
             bannerAfter.remove()
+
+            return false
         }
-    }
+    } elseif (country != 'IT') {
+        return false
+    };
 
     const bannerHtml = `
         <div class="em-special-banner">

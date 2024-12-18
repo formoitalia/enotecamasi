@@ -164,8 +164,9 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     margin: 40px auto;
     max-width: 50rem;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-family: baskerville-urw,sans-serif!important;
+    text-wrap: balance;
 
     @media screen and (min-width: 1024px) {
         font-size: 2.3rem;
