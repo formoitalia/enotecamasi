@@ -168,9 +168,43 @@ function headerMenu() {
 
 const intervalHeader = setInterval(() => headerMenu(), 200)
 
+function checkForBanner() {
+    //
+    let main = document.querySelector('main')
+    let banner = main.querySelector('.em-special-banner')
+    let country = localStorage.getItem('masiagricola_prod_countryCode')
+
+    if (banner) {
+        if (country == 'it') return false;
+        else banner.remove()
+    }
+
+    const bannerHtml = `
+        <div class="em-special-banner">
+            <p>Inserisci il tuo ordine entro le 12:00 del 19.12</p>
+            <p>per ricevere il tuo vino entro Natale</p>
+        </div>
+    `
+
+    const bannerElement = document.createElement('div')
+    bannerElement.innerHTML = bannerHtml
+
+    let block = main.querySelector('.text_block')
+    if (block) block.after(bannerElement)
+}
+
 function setup() {
     let page = window.__NEXT_DATA__ ? window.__NEXT_DATA__.query.page : false
     page ? document.body.classList.add(page) : null
+
+    // if ((document.body.classList.contains('home-page') || document.body.classList.contains('black-friday')) && (new Date() < new Date(1732921200000))) {
+    //     document.body.classList.add('is-black-friday')
+    // }
+    if (new Date() < new Date(1734606000000)) {
+        console.log('--')
+
+        setInterval(() => checkForBanner, 1000)
+    }
 }
 
 setup()

@@ -157,5 +157,16 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "expressway", sans-serif !important;
 }
 
+/**
+ * SPECIAL BANNER
+ */
+.em-special-banner {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 50rem;
+    font-size: 2.3rem;
+    font-family: baskerville-urw,sans-serif!important;
+}
+
 @import "plugin";
 @import "form";
