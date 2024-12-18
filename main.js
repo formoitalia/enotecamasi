@@ -174,3 +174,7 @@ function setup() {
 }
 
 setup()
+
+window.addEventListener("storage", () => {
+    console.log(window.localStorage.getItem("masiagricola_prod_countryCode"))
+})
