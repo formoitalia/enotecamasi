@@ -144,19 +144,21 @@ header {
                     height: 100%;
                     display: flex;
                     align-items: center;
-                }
 
-                &::after {
-                    content: '';
-                    position: absolute;
-                    background-color: var(--navbar-submenu);
-                    opacity: 0;
-                    top: 100%;
-                    left: 0;
-                    right: 0;
-                    pointer-events: none;
-                    transition: opacity .3s ease;
-                    height: 5.5rem;
+                    &.no-link {
+                        ::after {
+                            content: '';
+                            position: absolute;
+                            background-color: var(--navbar-submenu);
+                            opacity: 0;
+                            top: 100%;
+                            left: 0;
+                            right: 0;
+                            pointer-events: none;
+                            transition: opacity .3s ease;
+                            height: 5.5rem;
+                        }
+                    }
                 }
 
                 & > ul {
@@ -189,14 +191,6 @@ header {
 
 .category-menu {
     display: none !important;
-}
-
-.site-nav__menu__link {
-    &:not(.nolink) {
-        & ~ ::after {
-            display: none;
-        }
-    }
 }
 
 .cust_menu_container {
