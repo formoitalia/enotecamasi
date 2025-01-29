@@ -200,7 +200,7 @@ header {
 
 .cust_menu_container,
 .site-nav__menu__list {
-    .site-nav__menu__item:nth-child(7) {
+    & > .site-nav__menu__item:nth-child(7) {
         .site-nav__menu__link {
             color: #D62A29;
         }
