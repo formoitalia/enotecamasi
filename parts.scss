@@ -146,7 +146,7 @@ header {
                     align-items: center;
 
                     &.no-link {
-                        ::after {
+                        &::after {
                             content: '';
                             position: absolute;
                             background-color: var(--navbar-submenu);
@@ -178,7 +178,7 @@ header {
                 }
 
                 &:hover {
-                    &::after,
+                    .site-nav__menu__link::after,
                     & > ul {
                         opacity: 1;
                         pointer-events: auto;
