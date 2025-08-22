@@ -58,10 +58,10 @@
 
 .btn-filled {
     padding: 1.5rem 1.5rem !important;
-    display: block;
-    background: var(--color-brand-dark);
-    color: var(--color-contrast);
-    line-height: 0;
+    display: block !important;
+    background: var(--color-brand-dark) !important;
+    color: var(--color-contrast) !important;
+    line-height: 0 !important;
 }
 
 .button-checkout {
