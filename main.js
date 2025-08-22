@@ -7,9 +7,10 @@ const mainWrapper = document.querySelector('main.wrap')
 // TRUSTPILOT
 // -------------------------------------------------------------------------
 if (hasTrustPilot) {
+    // <div class="trustpilot-widget" data-locale="it-IT" data-template-id="54197383fd9dceac42a68694" data-businessunit-id="64be4445f0e432908cdebdcd"  data-style-width="100%" data-style-size="M" data-text-color="dark" data-headline="star" data-support-text="word" data-background="light" data-external-elements-color="dark">
     const trustpilotbox = document.createElement('div')
     trustpilotbox.innerHTML = `
-        <div class="trustpilot-widget" data-locale="it-IT" data-template-id="5419b637fa0340045cd0c936" data-businessunit-id="64be4445f0e432908cdebdcd" data-style-height="20px" data-style-width="100%" data-theme="light">
+        <div class="trustpilot-widget" data-locale="it-IT" data-template-id="54197383fd9dceac42a68694" data-businessunit-id="64be4445f0e432908cdebdcd" data-style-width="100%" data-style-size="L" data-text-color="dark" data-headline="star" data-support-text="word" data-background="light" data-external-elements-color="dark">
             <a href="https://it.trustpilot.com/review/enotecamasi.it" target="_blank" rel="noopener">Trustpilot</a>
         </div>
     `
@@ -205,6 +206,41 @@ function checkForBanner() {
     if (block) block.after(bannerElementAfter)
 }
 
+function showItBanner() {
+    //
+    let main = document.querySelector('main')
+    let banner = document.querySelector('.em-special-banner')
+    let country = localStorage.getItem('masiagricola_prod_countryCode')
+
+    if (banner) {
+        if (country == null || country == 'IT') return clearInterval(intervalBanner)
+        else {
+            banner.remove()
+
+            return clearInterval(intervalBanner)
+        }
+    } else if (country !== null && country != 'IT') {
+        return clearInterval(intervalBanner)
+    }
+
+    // console.log(country);
+
+    const bannerHtml = `
+        <div class="em-special-banner header-banner">
+            <p>Spese di <b>spedizione gratuita</b> da 129,90 €</p>
+        </div>
+    `
+
+    const bannerElement = document.createElement('div')
+
+    bannerElement.innerHTML = bannerHtml
+
+    let header = document.querySelector('header')
+    if (header) header.before(bannerElement)
+}
+
+const intervalBanner = setInterval(() => showItBanner(), 200)
+
 function setup() {
     let page = window.__NEXT_DATA__ ? window.__NEXT_DATA__.query.page : false
     page ? document.body.classList.add(page) : null
@@ -218,7 +254,3 @@ function setup() {
 }
 
 setup()
-
-window.addEventListener("storage", () => {
-    console.log(window.localStorage.getItem("masiagricola_prod_countryCode"))
-})

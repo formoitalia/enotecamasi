@@ -2,6 +2,7 @@
 
 :root {
     --color-brand-dark: #2A2618;
+    --color-brand-darker: #1A1309;
     --navbar-submenu: rgba(42, 38, 24, .95);
 }
 
@@ -53,6 +54,37 @@
 .button--submit
 .checkout-page .button--submit {
     @extend .btn;
+}
+
+.btn-filled {
+    padding: 1.5rem 1.5rem !important;
+    display: block;
+    background: var(--color-brand-dark);
+    color: var(--color-contrast);
+    line-height: 0;
+}
+
+.button-checkout {
+    border-radius: 0;
+}
+
+.product-box__action,
+.product-hero__action,
+.feedback-dialog__buttons {
+    .button--primary,
+    .feedback-dialog__buttons__cart {
+        @extend .btn-filled;
+    }
+}
+
+.product-hero__action {
+    .button--primary {
+        margin-bottom: 1em;
+    }
+}
+
+.product-box__action .button--primary {
+    margin-top: .2rem;
 }
 
 .button--secondary {
@@ -165,7 +197,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 40px auto;
     max-width: 50rem;
     font-size: 1.7rem;
-    font-family: baskerville-urw,sans-serif!important;
+    font-family: baskerville-urw, sans-serif!important;
     text-wrap: balance;
 
     @media screen and (min-width: 1024px) {
@@ -174,6 +206,16 @@ h1, h2, h3, h4, h5, h6 {
 
     .blink {
         animation: blinker 3s linear infinite;
+    }
+
+    &.header-banner {
+        margin: 0;
+        max-width: none;
+        padding: .75em 1em;
+        font-size: 14px;
+        font-family: "expressway", sans-serif !important;
+        color: white;
+        background-color: var(--color-brand-darker);
     }
 }
 
