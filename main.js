@@ -224,11 +224,23 @@ function showItBanner() {
     }
 
     // console.log(country);
+    let title = ''
+
+    switch (document.documentElement.lang) {
+        case 'en':
+            title = 'Shipping is <b>free</b> from €129.90'
+        case 'de':
+            title = '<b>Kostenloser Versand</b> ab 129,90 €'
+        case 'fr':
+            title = 'Frais de <b>port gratuits</b> à partir de 129,90 €'
+        case 'es':
+            title = 'Gastos de <b>envío gratis</b> a partir de 129,90 €'
+        default:
+            title = 'Spese di <b>spedizione gratuita</b> da 129,90 €'
+    }
 
     const bannerHtml = `
-        <div class="em-special-banner header-banner">
-            <p>Spese di <b>spedizione gratuita</b> da 129,90 €</p>
-        </div>
+        <div class="em-special-banner header-banner"><p>${title}</p></div>
     `
 
     const bannerElement = document.createElement('div')
