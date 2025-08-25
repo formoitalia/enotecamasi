@@ -64,6 +64,8 @@ function makeAdditionalProductInfoBox () {
             it: 'Informazioni aggiuntive',
             en: 'Additional info on this wine',
             de: 'Zusätzliche Informationen zu diesem Wein',
+            fr: 'Informations supplémentaires',
+            es: 'Información adicional'
         }
 
         let language = document.documentElement.lang
