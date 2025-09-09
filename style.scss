@@ -238,3 +238,23 @@ h1, h2, h3, h4, h5, h6 {
 
 @import "plugin";
 @import "form";
+
+
+.categoria-mic {
+    margin: 3em 0 5em;
+
+    .media-block__left {
+        display: none;
+    }
+
+    .media-block__right {
+        flex: 1 1 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .media-block__image {
+            max-width: 20em;
+        }
+    }
+}
