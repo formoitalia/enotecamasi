@@ -14,6 +14,7 @@ function setupTrustpilot() {
         case 'en': tpLang = 'en-EN'; break
         case 'de': tpLang = 'de-DE'; break
         case 'fr': tpLang = 'fr-FR'; break
+        case 'es': tpLang = 'es-ES'; break
     }
 
     // <div class="trustpilot-widget" data-locale="it-IT" data-template-id="54197383fd9dceac42a68694" data-businessunit-id="64be4445f0e432908cdebdcd"  data-style-width="100%" data-style-size="M" data-text-color="dark" data-headline="star" data-support-text="word" data-background="light" data-external-elements-color="dark">

@@ -28,3 +28,9 @@
         background-color: transparent !important;
     }
 }
+
+@media (max-width: 767px) {
+    .trustpilot-widget-fixed {
+        display: none !important;
+    }
+}
