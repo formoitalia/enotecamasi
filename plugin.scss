@@ -1,7 +1,4 @@
 .trustpilot-widget {
-    padding: .5rem 1em;
-    position: relative;
-    border-top: 1px solid var(--color-brand-dark);
     background-color: #fff;
 
     // &::before {
@@ -13,4 +10,21 @@
     //     bottom: .25em;
     //     border: 1px solid var(--color-brand-dark);
     // }
+
+    &:not(.trustpilot-widget-fixed) {
+        padding: .5rem 1em;
+        position: relative;
+        border-top: 1px solid var(--color-brand-dark);
+    }
+
+    &.trustpilot-widget-fixed {
+        position: fixed !important;
+        top: 67.5%;
+        left: 0%;
+        transform: translateY(0%) rotate(-90deg);
+        transform-origin: left top;
+        z-index: 9999;
+        padding: 0 !important;
+        background-color: transparent !important;
+    }
 }

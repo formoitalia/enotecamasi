@@ -6,17 +6,35 @@ const mainWrapper = document.querySelector('main.wrap')
 // -------------------------------------------------------------------------
 // TRUSTPILOT
 // -------------------------------------------------------------------------
-if (hasTrustPilot) {
+function setupTrustpilot() {
+    let lang = document.documentElement.lang
+    let tpLang = 'it-IT'
+
+    switch (lang) {
+        case 'en': tpLang = 'en-EN'; break
+        case 'de': tpLang = 'de-DE'; break
+        case 'fr': tpLang = 'fr-FR'; break
+    }
+
     // <div class="trustpilot-widget" data-locale="it-IT" data-template-id="54197383fd9dceac42a68694" data-businessunit-id="64be4445f0e432908cdebdcd"  data-style-width="100%" data-style-size="M" data-text-color="dark" data-headline="star" data-support-text="word" data-background="light" data-external-elements-color="dark">
     const trustpilotbox = document.createElement('div')
     trustpilotbox.innerHTML = `
-        <div class="trustpilot-widget" data-locale="it-IT" data-template-id="54197383fd9dceac42a68694" data-businessunit-id="64be4445f0e432908cdebdcd" data-style-width="100%" data-style-size="L" data-text-color="dark" data-headline="star" data-support-text="word" data-background="light" data-external-elements-color="dark">
+        <div class="trustpilot-widget" data-locale="${lang}" data-template-id="54197383fd9dceac42a68694" data-businessunit-id="64be4445f0e432908cdebdcd" data-style-width="100%" data-style-size="L" data-text-color="dark" data-headline="star" data-support-text="word" data-background="light" data-external-elements-color="dark">
+            <a href="https://it.trustpilot.com/review/enotecamasi.it" target="_blank" rel="noopener">Trustpilot</a>
+        </div>
+    `
+
+    // FIXED
+    const trustpilotboxFixed = document.createElement('div')
+    trustpilotboxFixed.innerHTML = `
+        <div class="trustpilot-widget trustpilot-widget-fixed" data-locale="${lang}" data-template-id="54197383fd9dceac42a68694" data-businessunit-id="64be4445f0e432908cdebdcd"  data-style-width="100%" data-style-size="S" data-token="62d473ed-7a16-4389-aac3-89754669e294" data-text-color="light" data-border-type="outline" data-headline="word" data-support-text="star" data-background="dark" data-external-elements-color="dark">
             <a href="https://it.trustpilot.com/review/enotecamasi.it" target="_blank" rel="noopener">Trustpilot</a>
         </div>
     `
 
     // let footerLogo = document.querySelector('.footer__logo')
     mainWrapper.parentNode.insertBefore(trustpilotbox, mainWrapper.nextSibling)
+    mainWrapper.parentNode.insertBefore(trustpilotboxFixed, mainWrapper.nextSibling)
 
     const script = document.createElement('script')
     script.src = '//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js'
@@ -269,6 +287,8 @@ function setup() {
     if (new Date() < new Date(1734606000000)) {
         setInterval(() => checkForBanner(), 2000)
     }
+
+    if (hasTrustPilot) setupTrustpilot()
 }
 
 setup()
