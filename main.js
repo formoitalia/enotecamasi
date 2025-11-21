@@ -282,9 +282,11 @@ function setup() {
     let page = window.__NEXT_DATA__ ? window.__NEXT_DATA__.query.page : false
     page ? document.body.classList.add(page) : null
 
-    // if ((document.body.classList.contains('home-page') || document.body.classList.contains('black-friday')) && (new Date() < new Date(1732921200000))) {
-    //     document.body.classList.add('is-black-friday')
-    // }
+    // if (document.body.classList.contains('black-friday')) && (new Date() < new Date(1732921200000))) {
+    if (document.body.classList.contains('black-friday')) {
+        document.body.classList.add('is-black-friday')
+    }
+
     if (new Date() < new Date(1734606000000)) {
         setInterval(() => checkForBanner(), 2000)
     }

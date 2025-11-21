@@ -156,6 +156,24 @@ body {
             color: #fff;
         }
     }
+
+    .category-intro__description {
+        max-width: 60rem;
+
+        .text_block {
+            font-size: 1.75rem;
+
+            @media screen and (min-width: 1024px) {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .category-modular-block {
+        .text_block:last-child {
+            font-style: italic;
+        }
+    }
 }
 
 .market-dialog {
