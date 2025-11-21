@@ -283,7 +283,7 @@ function setup() {
     page ? document.body.classList.add(page) : null
 
     // if (document.body.classList.contains('black-friday')) && (new Date() < new Date(1732921200000))) {
-    if (document.body.classList.contains('black-friday')) {
+    if (document.body.classList.contains('black-friday') || document.body.classList.contains('black-Friday')) {
         document.body.classList.add('is-black-friday')
     }
 
