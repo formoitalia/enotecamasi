@@ -119,6 +119,7 @@
 @import "pages";
 @import "prodotto";
 @import "components";
+@import "events";
 
 html, body {
     margin: 0;
@@ -128,8 +129,6 @@ html, body {
 body {
     font-family: "expressway", sans-serif;
 }
-
-@import "events";
 
 .market-dialog {
     color: black;
