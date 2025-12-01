@@ -282,15 +282,22 @@ function setup() {
     let page = window.__NEXT_DATA__ ? window.__NEXT_DATA__.query.page : false
     page ? document.body.classList.add(page) : null
 
-    // if (document.body.classList.contains('black-friday')) && (new Date() < new Date(1732921200000))) {
+    // IS BLACK FRIDAY
+    // if (
+    //     (
+    //         document.body.classList.contains('home-page') ||
+    //         document.body.classList.contains('black-friday') ||
+    //         document.body.classList.contains('black-Friday')
+    //     ) && new Date() < new Date(1764574200000)
+    // ) {
+    //     document.body.classList.add('is-black-friday')
+    // }
+
+    // IS CHRISTMAS
     if (
-        (
-            document.body.classList.contains('home-page') ||
-            document.body.classList.contains('black-friday') ||
-            document.body.classList.contains('black-Friday')
-        ) && new Date() < new Date(1764574200000)
+        document.body.classList.contains('home-page') && (new Date() < new Date(1766703599000))
     ) {
-        document.body.classList.add('is-black-friday')
+        document.body.classList.add('christmas')
     }
 
     if (new Date() < new Date(1734606000000)) {
