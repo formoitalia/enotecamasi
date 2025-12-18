@@ -261,7 +261,7 @@ function showItBanner() {
             title = 'Gastos de <b>envío gratis</b> a partir de 129,90 €.<br>Fechas límite para pedidos en Italia: 18/12 para la entrega de Navidad, 23/12 para la de Año Nuevo'
             break;
         default:
-            title = 'Spese di <b>spedizione gratuita</b> da 129,90 €. Date di Cut-Off per ordini in Italia: 18/12 per la consegna di Natale, 23/12 per quella di Capodanno.'
+            title = 'Spese di <b>spedizione gratuita</b> da 129,90 €.<br>Date di Cut-Off per ordini in Italia: 18/12 per la consegna di Natale, 23/12 per quella di Capodanno.'
     }
 
     const bannerHtml = `
