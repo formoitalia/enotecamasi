@@ -249,19 +249,19 @@ function showItBanner() {
 
     switch (document.documentElement.lang) {
         case 'en':
-            title = 'Shipping is <b>free</b> from €129.90.<br>Cut-off dates for orders in Italy: December 18 for Christmas delivery, December 23 for New Year delivery'
+            title = 'Shipping is <b>free</b> from €129.90'
             break;
         case 'de':
-            title = '<b>Kostenloser Versand</b> ab 129,90 €.<br>Bestellfristen für Bestellungen in Italien: 18.12. für die Weihnachtslieferung, 23.12. für die Neujahrslieferung'
+            title = '<b>Kostenloser Versand</b> ab 129,90 €'
             break;
         case 'fr':
-            title = 'Frais de <b>port gratuits</b> à partir de 129,90 €.<br>Dates de clôture des commandes en Italie : 18/12 pour la livraison de Noël, 23/12 pour celle du Nouvel An.'
+            title = 'Frais de <b>port gratuits</b> à partir de 129,90 €'
             break;
         case 'es':
-            title = 'Gastos de <b>envío gratis</b> a partir de 129,90 €.<br>Fechas límite para pedidos en Italia: 18/12 para la entrega de Navidad, 23/12 para la de Año Nuevo'
+            title = 'Gastos de <b>envío gratis</b> a partir de 129,90 €'
             break;
         default:
-            title = 'Spese di <b>spedizione gratuita</b> da 129,90 €.<br>Date di Cut-Off per ordini in Italia: 18/12 per la consegna di Natale, 23/12 per quella di Capodanno.'
+            title = 'Spese di <b>spedizione gratuita</b> da 129,90 €'
     }
 
     const bannerHtml = `
