@@ -249,19 +249,19 @@ function showItBanner() {
 
     switch (document.documentElement.lang) {
         case 'en':
-            title = 'Shipping is <b>free</b> from €129.90.<br>New Year’s Refill: 10% and 15% off selected items'
+            title = 'Shipping is <b>free</b> from €129.90.'
             break;
         case 'de':
-            title = '<b>Kostenloser Versand</b> ab 129,90 €.<br>New Year’s Refill: 10 % und 15 % Rabatt auf ausgewählte Artikel'
+            title = '<b>Kostenloser Versand</b> ab 129,90 €.'
             break;
         case 'fr':
-            title = 'Frais de <b>port gratuits</b> à partir de 129,90 €.<br>New Year’s Refill: 10 % et 15 % de réduction sur une sélection de références'
+            title = 'Frais de <b>port gratuits</b> à partir de 129,90 €.'
             break;
         case 'es':
-            title = 'Gastos de <b>envío gratis</b> a partir de 129,90 €.<br>New Year’s Refill: 10 % y 15 % de descuento en referencias seleccionadas'
+            title = 'Gastos de <b>envío gratis</b> a partir de 129,90 €.'
             break;
         default:
-            title = 'Spese di <b>spedizione gratuita</b> da 129,90 €.<br>New Year’s Refill: sconto del 10% e 15% su referenze selezionate'
+            title = 'Spese di <b>spedizione gratuita</b> da 129,90 €.'
     }
 
     const bannerHtml = `
