@@ -200,11 +200,11 @@ header {
 
 .cust_menu_container,
 .site-nav__menu__list {
-    .site-nav__menu__link[title=PROMO] {
-        color: #D62A29;
+    & > .site-nav__menu__item:last-child {
+        .site-nav__menu__link {
+            color: #D62A29;
+        }
     }
-    // & > .site-nav__menu__item:nth-child(7) {
-    // }
 }
 
 /* -----------------------------------------------------------------------------
