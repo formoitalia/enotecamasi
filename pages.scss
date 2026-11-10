@@ -250,6 +250,7 @@
             &:first-of-type {
                 margin-top: 4rem;
                 margin-bottom: 0;
+                animation: blinker 3s linear infinite;
             }
         }
 
