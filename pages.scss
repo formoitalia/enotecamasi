@@ -250,14 +250,32 @@
             &:first-of-type {
                 margin-top: 4rem;
                 margin-bottom: 0;
-                animation: blinker 3s linear infinite;
             }
         }
 
         .text_block:nth-child(3) {
             font-style: italic;
+            font-size: 1.5em;
             margin-top: 1rem;
             margin-bottom: 4rem;
+        }
+
+        .centered-text,
+        .last-text {
+            background-color: transparent;
+
+            .text-content__title {
+                visibility: hidden;
+            }
+
+            .text-content__text {
+                font-size: 1.7rem;
+                font-family: baskerville-urw,sans-serif!important;
+
+                p:not(:first-child) {
+                    margin-top: 1rem;
+                }
+            }
         }
 
         .gtm-product-list {

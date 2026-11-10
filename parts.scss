@@ -30,10 +30,6 @@ header {
         max-width: 1540px;
         margin: auto;
 
-        @media screen and (min-width: 1560px) {
-            gap: 2rem;
-        }
-
         .nav__logo {
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
@@ -204,6 +200,10 @@ header {
         .site-nav__menu__link {
             color: #D62A29;
         }
+    }
+
+    .site-nav__menu__link[title="CALENDARIO AVVENTO MASI"] {
+        color: goldenrod;
     }
 }
 
