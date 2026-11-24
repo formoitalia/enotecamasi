@@ -283,15 +283,15 @@ function setup() {
     page ? document.body.classList.add(page) : null
 
     // IS BLACK FRIDAY
-    // if (
-    //     (
-    //         document.body.classList.contains('home-page') ||
-    //         document.body.classList.contains('black-friday') ||
-    //         document.body.classList.contains('black-Friday')
-    //     ) && new Date() < new Date(1764574200000)
-    // ) {
-    //     document.body.classList.add('is-black-friday')
-    // }
+    if (
+        (
+            document.body.classList.contains('home-page') ||
+            document.body.classList.contains('black-friday') ||
+            document.body.classList.contains('black-Friday')
+        ) && new Date() < new Date('2026-11-30T08:30:00')
+    ) {
+        document.body.classList.add('is-black-friday')
+    }
 
     // IS CHRISTMAS
     if (
