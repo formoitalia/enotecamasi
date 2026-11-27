@@ -288,7 +288,7 @@ function setup() {
             document.body.classList.contains('home-page') ||
             document.body.classList.contains('black-friday') ||
             document.body.classList.contains('black-Friday')
-        ) && new Date() < new Date('2026-11-30T08:30:00')
+        ) && new Date() < new Date('2026-12-01T08:30:00')
     ) {
         document.body.classList.add('is-black-friday')
     }
